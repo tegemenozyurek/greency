@@ -15,6 +15,7 @@ const translations = {
       { to: '/iletisim', label: 'İletişim' },
     ],
     sloganMain: 'GREENSY',
+    sloganSubtitle: 'Gelecek Bize Emanet',
     sloganHighlight: 'Negatif İyon Jeneratörü',
     tanitim: 'Toprağa, Havaya ve Yaşama Hayat Veren Dönüşüm Teknolojisi',
     incele: 'İncele',
@@ -29,6 +30,7 @@ const translations = {
       { to: '/iletisim', label: 'Contact' },
     ],
     sloganMain: 'GREENSY',
+    sloganSubtitle: 'The Future is Entrusted to Us',
     sloganHighlight: 'Negative Ion Generator',
     tanitim: 'Transformation Technology Giving Life to Soil, Air and Life',
     incele: 'Explore',
@@ -48,6 +50,9 @@ const AnaSayfa = ({ lang, translations }) => (
     />
     <div className="anasayfa-gradient"></div>
     <div className="anasayfa-overlay anasayfa-overlay--centered">
+      <div className="anasayfa-subtitle">
+        {translations[lang].sloganSubtitle}
+      </div>
       <h1 className="anasayfa-slogan-v2">
         <span className="slogan-main">{translations[lang].sloganMain}</span> <br />
         <span className="slogan-highlight">{translations[lang].sloganHighlight}</span>
@@ -545,127 +550,170 @@ const KullanimAlanlari = ({ lang }) => (
 );
 const Hakkimizda = ({ lang }) => {
   return (
-    <div className="about-page-new">
-      {/* Hero Section with Parallax */}
-      <section className="about-hero-new">
-        <div className="hero-background">
-          <div className="hero-particles"></div>
-          <div className="hero-gradient"></div>
-        </div>
-        <div className="hero-content-new">
-          <div className="hero-text-new">
-            <h1 className="hero-title-new">
-              <span className="title-line-1">{lang === 'tr' ? 'Bilim ve Doğayı' : 'Science and Nature'}</span>
-              <span className="title-line-2">{lang === 'tr' ? 'Buluşturan Güç' : 'United by Power'}</span>
+    <div className="about-page">
+      {/* Hero Section */}
+      <section className="about-hero">
+        <div className="about-hero-content">
+          <div className="about-hero-text">
+            <h1 className="about-hero-title">
+              {lang === 'tr' ? 'Hakkımızda' : 'About Us'}
             </h1>
-            <p className="hero-description-new">
+            <p className="about-hero-description">
               {lang === 'tr' 
-                ? 'Sun-Tek Ekoloji, doğanın gücünü bilimle birleştirerek sürdürülebilir bir gelecek için çalışır. GREENSY teknolojimiz, negatif iyonların doğal arındırıcı etkisini modern yaşamın her alanına taşır.'
-                : 'Sun-Tek Ecology works for a sustainable future by combining the power of nature with science. Our GREENSY technology brings the natural purifying effect of negative ions to every area of modern life.'
+                ? 'Doğanın gücünü bilimle birleştirerek, sürdürülebilir bir gelecek için çalışıyoruz.'
+                : 'We work for a sustainable future by combining the power of nature with science.'
               }
             </p>
           </div>
-          <div className="hero-visual-new">
-            <div className="logo-container">
-              <img src={require('./images/suntek.png')} alt="Sun-Tek Logo" className="suntek-logo-new" />
-              <div className="logo-glow"></div>
+          <div className="about-hero-visual">
+            <div className="about-logo">
+              <img src={require('./images/suntek.png')} alt="Sun-Tek Logo" className="suntek-logo" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision Cards */}
-      <section className="about-mission-new">
-        <div className="container-new">
-          <div className="mission-cards">
-            <div className="mission-card-new">
-              <div className="card-icon-new">🎯</div>
-              <h3>{lang === 'tr' ? 'Misyonumuz' : 'Our Mission'}</h3>
+      {/* Story Section */}
+      <section className="about-story">
+        <div className="container">
+          <div className="story-content">
+            <h2 className="section-title">
+              {lang === 'tr' ? 'Hikayemiz' : 'Our Story'}
+            </h2>
+            <div className="story-text">
               <p>
+                {lang === 'tr' 
+                  ? 'Sun-Tek Ekoloji, doğanın kendi dengesini nasıl koruduğu sorusundan yola çıkarak kuruldu. Orman havasının ferahlığı, fırtına sonrası temizliği ve şelale havasının canlandırıcı etkisinin ardındaki bilimi araştırdık.'
+                  : 'Sun-Tek Ecology was founded based on the question of how nature maintains its own balance. We researched the science behind the freshness of forest air, the cleanliness after storms, and the invigorating effect of waterfall air.'
+                }
+              </p>
+              <p>
+                {lang === 'tr' 
+                  ? 'Bu araştırmalar bizi negatif iyonların gücüne götürdü. Doğanın bu arındırıcı gücünü modern teknolojiyle birleştirerek GREENSY\'yi geliştirdik.'
+                  : 'This research led us to the power of negative ions. We developed GREENSY by combining this purifying power of nature with modern technology.'
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Purpose Section */}
+      <section className="about-purpose">
+        <div className="container">
+          <div className="purpose-content">
+            <h2 className="section-title">
+              {lang === 'tr' ? 'Amacımız' : 'Our Purpose'}
+            </h2>
+            <p className="purpose-intro">
+              {lang === 'tr' 
+                ? 'Günümüzde karşılaştığımız çevresel zorluklar, doğal çözümler gerektiriyor. GREENSY, bu zorluklara karşı doğanın kendi yöntemlerini kullanarak çözüm sunuyor.'
+                : 'The environmental challenges we face today require natural solutions. GREENSY offers solutions to these challenges using nature\'s own methods.'
+              }
+            </p>
+            
+            <div className="challenges-grid">
+              <div className="challenge-item">
+                <div className="challenge-icon">🌾</div>
+                <h3>{lang === 'tr' ? 'Tarımsal Verimlilik' : 'Agricultural Productivity'}</h3>
+              </div>
+              <div className="challenge-item">
+                <div className="challenge-icon">🏭</div>
+                <h3>{lang === 'tr' ? 'Hava Kalitesi' : 'Air Quality'}</h3>
+              </div>
+              <div className="challenge-item">
+                <div className="challenge-icon">🐄</div>
+                <h3>{lang === 'tr' ? 'Hayvan Sağlığı' : 'Animal Health'}</h3>
+              </div>
+              <div className="challenge-item">
+                <div className="challenge-icon">🏠</div>
+                <h3>{lang === 'tr' ? 'Yaşam Kalitesi' : 'Quality of Life'}</h3>
+              </div>
+            </div>
+            
+            <p className="purpose-conclusion">
+              {lang === 'tr' 
+                ? 'GREENSY, bu alanlarda doğal ve etkili çözümler sunarak, hem çevresel hem de ekonomik sürdürülebilirliği destekler.'
+                : 'GREENSY supports both environmental and economic sustainability by offering natural and effective solutions in these areas.'
+              }
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="about-values">
+        <div className="container">
+          <div className="values-content">
+            <h2 className="section-title">
+              {lang === 'tr' ? 'Değerlerimiz' : 'Our Values'}
+            </h2>
+            
+            <div className="values-grid">
+              <div className="value-item">
+                <div className="value-icon">🔬</div>
+                <h3>{lang === 'tr' ? 'Bilimsel Yaklaşım' : 'Scientific Approach'}</h3>
+              </div>
+              <div className="value-item">
+                <div className="value-icon">🌱</div>
+                <h3>{lang === 'tr' ? 'Sürdürülebilirlik' : 'Sustainability'}</h3>
+              </div>
+              <div className="value-item">
+                <div className="value-icon">🤝</div>
+                <h3>{lang === 'tr' ? 'Güvenilirlik' : 'Reliability'}</h3>
+              </div>
+              <div className="value-item">
+                <div className="value-icon">💡</div>
+                <h3>{lang === 'tr' ? 'İnovasyon' : 'Innovation'}</h3>
+              </div>
+            </div>
+            
+            <p className="values-conclusion">
+              {lang === 'tr' 
+                ? 'Bu değerler, her kararımızın ve her ürünümüzün temelini oluşturur. Müşterilerimizin güvenini kazanmak ve sürdürülebilir bir gelecek için çalışmak en önemli önceliğimizdir.'
+                : 'These values form the foundation of every decision we make and every product we create. Gaining our customers\' trust and working for a sustainable future is our top priority.'
+              }
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision Section */}
+      <section className="about-mission-vision">
+        <div className="container">
+          <div className="mission-vision-grid">
+            <div className="mission-card">
+              <h2 className="section-title">
+                {lang === 'tr' ? 'Misyonumuz' : 'Our Mission'}
+              </h2>
+              <p className="mission-text">
                 {lang === 'tr'
                   ? 'Doğanın arındırıcı gücünü modern teknolojiyle birleştirerek, insanların ve doğanın uyum içinde yaşayabileceği temiz ve sağlıklı ortamlar yaratmak.'
                   : 'To create clean and healthy environments where people and nature can live in harmony by combining nature\'s purifying power with modern technology.'
                 }
               </p>
-              <ul className="mission-list-new">
+              <ul className="mission-list">
                 <li>{lang === 'tr' ? 'Negatif iyon teknolojisini geliştirmek' : 'Develop negative ion technology'}</li>
                 <li>{lang === 'tr' ? 'Sürdürülebilir çözümler sunmak' : 'Provide sustainable solutions'}</li>
                 <li>{lang === 'tr' ? 'Yaşam kalitesini artırmak' : 'Improve quality of life'}</li>
               </ul>
             </div>
             
-            <div className="vision-card-new">
-              <div className="card-icon-new">🔮</div>
-              <h3>{lang === 'tr' ? 'Vizyonumuz' : 'Our Vision'}</h3>
-              <p>
+            <div className="vision-card">
+              <h2 className="section-title">
+                {lang === 'tr' ? 'Vizyonumuz' : 'Our Vision'}
+              </h2>
+              <p className="vision-text">
                 {lang === 'tr'
                   ? 'GREENSY teknolojisini dünya çapında tanınan, güvenilir ve etkili bir çözüm haline getirerek, doğa dostu yaşamın standart haline gelmesine öncülük etmek.'
                   : 'To lead the way in making eco-friendly living the standard by making GREENSY technology a globally recognized, reliable, and effective solution.'
                 }
               </p>
-              <ul className="vision-list-new">
+              <ul className="mission-list">
                 <li>{lang === 'tr' ? 'Global bir marka olmak' : 'Become a global brand'}</li>
                 <li>{lang === 'tr' ? 'Teknoloji liderliği sağlamak' : 'Provide technology leadership'}</li>
                 <li>{lang === 'tr' ? 'Çevresel etkiyi maksimize etmek' : 'Maximize environmental impact'}</li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="about-values-new">
-        <div className="container-new">
-          <div className="section-header-new">
-            <h2 className="section-title-new">
-              <span className="title-accent">{lang === 'tr' ? 'Değerlerimiz' : 'Our Values'}</span>
-            </h2>
-            <div className="title-underline"></div>
-          </div>
-          
-          <div className="values-grid-new">
-            <div className="value-card-new">
-              <div className="value-icon-new">🔬</div>
-              <h3>{lang === 'tr' ? 'Bilimsel Yaklaşım' : 'Scientific Approach'}</h3>
-              <p>
-                {lang === 'tr'
-                  ? 'Her çözümümüz bilimsel araştırma ve test süreçlerinden geçer. Kanıta dayalı yaklaşımımız, güvenilir ve etkili sonuçlar sağlar.'
-                  : 'Every solution we offer goes through scientific research and testing processes. Our evidence-based approach ensures reliable and effective results.'
-                }
-              </p>
-            </div>
-            
-            <div className="value-card-new">
-              <div className="value-icon-new">🌱</div>
-              <h3>{lang === 'tr' ? 'Sürdürülebilirlik' : 'Sustainability'}</h3>
-              <p>
-                {lang === 'tr'
-                  ? 'Gelecek nesiller için yaşanabilir bir dünya bırakmayı hedefliyoruz. Çevresel sorumluluk, her kararımızın merkezinde yer alır.'
-                  : 'We aim to leave a livable world for future generations. Environmental responsibility is at the center of every decision we make.'
-                }
-              </p>
-            </div>
-            
-            <div className="value-card-new">
-              <div className="value-icon-new">🤝</div>
-              <h3>{lang === 'tr' ? 'Güvenilirlik' : 'Reliability'}</h3>
-              <p>
-                {lang === 'tr'
-                  ? 'Müşterilerimizin güvenini kazanmak ve korumak en önemli önceliğimiz. Şeffaflık ve dürüstlük, iş modelimizin temelidir.'
-                  : 'Gaining and maintaining our customers\' trust is our top priority. Transparency and integrity are the foundation of our business model.'
-                }
-              </p>
-            </div>
-            
-            <div className="value-card-new">
-              <div className="value-icon-new">💡</div>
-              <h3>{lang === 'tr' ? 'İnovasyon' : 'Innovation'}</h3>
-              <p>
-                {lang === 'tr'
-                  ? 'Sürekli gelişim ve yenilikçi çözümler üretmeye odaklanıyoruz. Teknolojik ilerleme, sürdürülebilir geleceğin anahtarıdır.'
-                  : 'We focus on continuous improvement and producing innovative solutions. Technological advancement is the key to a sustainable future.'
-                }
-              </p>
             </div>
           </div>
         </div>
@@ -811,16 +859,11 @@ const Iletisim = ({ lang }) => {
     name: '',
     email: '',
     phone: '',
-    company: '',
     subject: '',
     message: ''
   });
-
-  const [formStatus, setFormStatus] = useState({
-    isSubmitting: false,
-    isSubmitted: false,
-    error: null
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -829,206 +872,156 @@ const Iletisim = ({ lang }) => {
     });
   };
 
-  const validateForm = () => {
-    const errors = [];
-    
-    if (!formData.subject.trim()) {
-      errors.push(lang === 'tr' ? 'Konu gereklidir' : 'Subject is required');
-    }
-    
-    if (!formData.message.trim()) {
-      errors.push(lang === 'tr' ? 'Mesaj gereklidir' : 'Message is required');
-    }
-    
-    // Optional email validation - only validate if email is provided
-    if (formData.email.trim() && !/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.push(lang === 'tr' ? 'Geçerli bir e-posta adresi giriniz' : 'Please enter a valid email address');
-    }
-    
-    return errors;
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const errors = validateForm();
-    if (errors.length > 0) {
-      setFormStatus({
-        isSubmitting: false,
-        isSubmitted: false,
-        error: errors.join(', ')
-      });
-      return;
-    }
-
-    setFormStatus({
-      isSubmitting: true,
-      isSubmitted: false,
-      error: null
-    });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
     try {
-      // Simulate form submission (replace with actual API call)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Email uygulamasını açmak için mailto linki oluştur
+      const emailSubject = encodeURIComponent(formData.subject);
+      const emailBody = encodeURIComponent(
+        `${formData.message}\n\n---\nGönderen: ${formData.name || 'Anonim'}\nE-posta: ${formData.email || 'Belirtilmemiş'}\nTelefon: ${formData.phone || 'Belirtilmemiş'}`
+      );
       
-      // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
+      const mailtoLink = `mailto:info@suntekekoloji.com?subject=${emailSubject}&body=${emailBody}`;
       
-      // Send email using mailto as fallback
-      const emailBody = `
-Ad Soyad: ${formData.name}
-E-posta: ${formData.email}
-Telefon: ${formData.phone}
-Şirket: ${formData.company}
-Konu: ${formData.subject}
-
-Mesaj:
-${formData.message}
-      `;
-      
-      const mailtoLink = `mailto:info@sunteknoloji.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+      // Email uygulamasını aç
       window.open(mailtoLink, '_blank');
       
-      setFormStatus({
-        isSubmitting: false,
-        isSubmitted: true,
-        error: null
-      });
+      // Başarılı gönderim simülasyonu
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // Reset form
+      setSubmitStatus('success');
       setFormData({
         name: '',
         email: '',
         phone: '',
-        company: '',
         subject: '',
         message: ''
       });
-      
     } catch (error) {
-      setFormStatus({
-        isSubmitting: false,
-        isSubmitted: false,
-        error: lang === 'tr' ? 'Bir hata oluştu. Lütfen tekrar deneyiniz.' : 'An error occurred. Please try again.'
-      });
+      console.error('Email uygulaması açma hatası:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div className="iletisim-page">
       <div className="iletisim-content">
-        <div className="iletisim-form-container">
-          <div className="iletisim-form">
-            <h2>{lang === 'tr' ? 'Bizimle İletişime Geçin' : 'Contact Us'}</h2>
-            
-            {formStatus.isSubmitted && (
-              <div className="form-success">
-                <p>{lang === 'tr' ? 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.' : 'Your message has been sent successfully! We will get back to you soon.'}</p>
-              </div>
-            )}
-            
-            {formStatus.error && (
-              <div className="form-error">
-                <p>{formStatus.error}</p>
-              </div>
-            )}
-            
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">{lang === 'tr' ? 'Ad Soyad' : 'Full Name'}</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  disabled={formStatus.isSubmitting}
-                />
-              </div>
+        {/* Contact Form */}
+        <section className="iletisim-form-section">
+          <div className="iletisim-form-container">
+            <div className="iletisim-form">
+              <h2>{lang === 'tr' ? 'Mesaj Gönder' : 'Send Message'}</h2>
               
-              <div className="form-group">
-                <label htmlFor="email">{lang === 'tr' ? 'E-posta' : 'Email'}</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  disabled={formStatus.isSubmitting}
-                />
-              </div>
+              {submitStatus === 'success' && (
+                <div className="success-message">
+                  <div className="success-icon">✅</div>
+                  <p>{lang === 'tr' ? 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.' : 'Your message has been sent successfully! We will get back to you as soon as possible.'}</p>
+                </div>
+              )}
               
-              <div className="form-group">
-                <label htmlFor="phone">{lang === 'tr' ? 'Telefon' : 'Phone'}</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  disabled={formStatus.isSubmitting}
-                />
-              </div>
-              
-              <div className="form-group">
-                <label htmlFor="company">{lang === 'tr' ? 'Şirket' : 'Company'}</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  disabled={formStatus.isSubmitting}
-                />
-              </div>
-              
-              <div className="form-group full-width">
-                <label htmlFor="subject">{lang === 'tr' ? 'Konu *' : 'Subject *'}</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  disabled={formStatus.isSubmitting}
-                />
-              </div>
-              
-              <div className="form-group full-width">
-                <label htmlFor="message">{lang === 'tr' ? 'Mesaj *' : 'Message *'}</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="5"
-                  required
-                  disabled={formStatus.isSubmitting}
-                ></textarea>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="submit-btn"
-                disabled={formStatus.isSubmitting}
-              >
-                <span>
-                  {formStatus.isSubmitting 
-                    ? (lang === 'tr' ? 'Gönderiliyor...' : 'Sending...') 
-                    : (lang === 'tr' ? 'Gönder' : 'Send')
-                  }
-                </span>
-                {!formStatus.isSubmitting && (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                )}
-              </button>
-            </form>
+              {submitStatus === 'error' && (
+                <div className="error-message">
+                  <div className="error-icon">❌</div>
+                  <p>{lang === 'tr' ? 'Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.' : 'An error occurred while sending the message. Please try again.'}</p>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit}>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="name">{lang === 'tr' ? 'Ad Soyad' : 'Full Name'}</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder={lang === 'tr' ? 'Adınız ve soyadınız' : 'Your full name'}
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label htmlFor="email">{lang === 'tr' ? 'E-posta' : 'Email'}</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder={lang === 'tr' ? 'ornek@email.com' : 'example@email.com'}
+                    />
+                  </div>
+                </div>
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="phone">{lang === 'tr' ? 'Telefon' : 'Phone'}</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder={lang === 'tr' ? '+90 (5XX) XXX XX XX' : '+90 (5XX) XXX XX XX'}
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label htmlFor="subject">{lang === 'tr' ? 'Konu *' : 'Subject *'}</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                      placeholder={lang === 'tr' ? 'Mesajınızın konusu' : 'Subject of your message'}
+                    />
+                  </div>
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="message">{lang === 'tr' ? 'Mesaj *' : 'Message *'}</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="6"
+                    required
+                    placeholder={lang === 'tr' ? 'Mesajınızı buraya yazın...' : 'Write your message here...'}
+                  ></textarea>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className={`submit-btn ${isSubmitting ? 'submitting' : ''}`}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="loading-spinner"></div>
+                      <span>{lang === 'tr' ? 'Gönderiliyor...' : 'Sending...'}</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>{lang === 'tr' ? 'Gönder' : 'Send'}</span>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </>
+                  )}
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
