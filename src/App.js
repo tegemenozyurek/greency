@@ -4,6 +4,18 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import './App.css';
 
+// Import all images
+import product1 from './images/product/1.png';
+import product2 from './images/product/2.png';
+import product3 from './images/product/3.png';
+import product4 from './images/product/4.png';
+import slider1 from './images/slider/1.png';
+import slider2 from './images/slider/2.png';
+import slider3 from './images/slider/3.png';
+import slider4 from './images/slider/4.png';
+import slider5 from './images/slider/5.png';
+import suntekLogo from './images/suntek.png';
+
 const translations = {
   tr: {
     nav: [
@@ -125,7 +137,7 @@ const Urun = ({ lang }) => {
         </div>
         <div className="hero-visual">
           <div className="product-showcase">
-            <img src={require('./images/product/1.png')} alt="GREENSY" className="product-image" />
+            <img src={product1} alt="GREENSY" className="product-image" />
           </div>
         </div>
       </div>
@@ -219,7 +231,7 @@ const Urun = ({ lang }) => {
             </div>
           </div>
           <div className="what-visual">
-            <img src={require('./images/product/2.png')} alt="GREENSY Technology" className="tech-image" />
+            <img src={product2} alt="GREENSY Technology" className="tech-image" />
             <div className="tech-overlay">
               <div className="tech-spec">
                 <span className="spec-label">{lang === 'tr' ? 'Teknoloji' : 'Technology'}</span>
@@ -329,7 +341,7 @@ const Urun = ({ lang }) => {
           </div>
           
           <div className="how-visual">
-            <img src={require('./images/product/3.png')} alt="GREENSY Working Principle" className="how-image" />
+            <img src={product3} alt="GREENSY Working Principle" className="how-image" />
             <div className="how-overlay">
               <div className="tech-info">
                 <div className="tech-item">
@@ -403,7 +415,7 @@ const Urun = ({ lang }) => {
             </p>
           </div>
           <div className="cta-visual">
-            <img src={require('./images/product/4.png')} alt="GREENSY Future" className="future-image" />
+            <img src={product4} alt="GREENSY Future" className="future-image" />
           </div>
         </div>
       </div>
@@ -437,19 +449,19 @@ const Urun = ({ lang }) => {
               </button>
               <div className="slider-track">
                 <div className="slider-slide">
-                  <img src={require('./images/slider/1.png')} alt="GREENSY Gallery 1" />
+                  <img src={slider1} alt="GREENSY Gallery 1" />
                 </div>
                 <div className="slider-slide">
-                  <img src={require('./images/slider/2.png')} alt="GREENSY Gallery 2" />
+                  <img src={slider2} alt="GREENSY Gallery 2" />
                 </div>
                 <div className="slider-slide">
-                  <img src={require('./images/slider/3.png')} alt="GREENSY Gallery 3" />
+                  <img src={slider3} alt="GREENSY Gallery 3" />
                 </div>
                 <div className="slider-slide">
-                  <img src={require('./images/slider/4.png')} alt="GREENSY Gallery 4" />
+                  <img src={slider4} alt="GREENSY Gallery 4" />
                 </div>
                 <div className="slider-slide">
-                  <img src={require('./images/slider/5.png')} alt="GREENSY Gallery 5" />
+                  <img src={slider5} alt="GREENSY Gallery 5" />
                 </div>
               </div>
               <button 
@@ -673,7 +685,7 @@ const Hakkimizda = ({ lang }) => {
           </div>
           <div className="about-hero-visual">
             <div className="about-logo">
-              <img src={require('./images/suntek.png')} alt="Sun-Tek Logo" className="suntek-logo" />
+              <img src={suntekLogo} alt="Sun-Tek Logo" className="suntek-logo" />
             </div>
           </div>
         </div>
