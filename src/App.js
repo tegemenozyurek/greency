@@ -16,6 +16,12 @@ import slider4 from './images/slider/4.png';
 import slider5 from './images/slider/5.png';
 import suntekLogo from './images/suntek.png';
 
+// Import field images for usage areas slider
+import tarimImage from './images/fields/tarim.png';
+import hayvancilikImage from './images/fields/hayvancilik.png';
+import kapaliImage from './images/fields/kapali.png';
+import gidaImage from './images/fields/gida.png';
+
 const translations = {
   tr: {
     nav: [
@@ -503,169 +509,154 @@ const Urun = ({ lang }) => {
   </div>
   );
 };
-const KullanimAlanlari = ({ lang }) => (
-  <div className="areas-page">
-    {/* Hero Section */}
-    <section className="areas-hero">
-      <div className="areas-hero-content">
-        <div className="areas-hero-text">
-          <h1 className="areas-hero-title">
-            <span className="areas-title-main">
-              {lang === 'tr' ? 'Kullanım Alanları' : 'Areas of Use'}
-            </span>
-            <span className="areas-title-subtitle">
-              {lang === 'tr' ? 'Bilim Sürdürülebilirlikle Buluşuyor' : 'Where Science Meets Sustainability'}
-            </span>
-          </h1>
-          <p className="areas-hero-description">
-            {lang === 'tr' 
-              ? 'GREENSY Negatif İyon Jeneratörü, doğal iyonizasyon teknolojisini çeşitli ortamlara sunmak için tasarlanmıştır—hava kalitesini iyileştirir, biyolojik dengeyi destekler ve sektörler arası verimliliği artırır.'
-              : 'GREENSY Negative Ion Generator is designed to deliver natural ionization technology to a variety of environments—improving air quality, supporting biological balance, and enhancing productivity across sectors.'
-            }
-          </p>
-        </div>
+const KullanimAlanlari = ({ lang }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null);
 
-      </div>
-    </section>
+  // Content data for each slide
+  const slideContent = {
+    tr: [
+      {
+        title: "Tarım",
+        subtitle: "Sürdürülebilir Tarım Teknolojisi",
+        description: "GREENSY, modern tarımda devrim yaratıyor. Negatif iyon teknolojisi ile bitkilerin doğal bağışıklık sistemini güçlendirir, kimyasal kullanımını minimize eder ve verimliliği artırır.",
+        image: tarimImage
+      },
+      {
+        title: "Hayvancılık", 
+        subtitle: "Hayvan Sağlığı ve Verimlilik",
+        description: "Kapalı hayvancılık tesislerinde GREENSY, amonyak ve karbon dioksit gibi zararlı gazları nötralize ederek hayvan sağlığını korur ve üretim verimliliğini artırır.",
+        image: hayvancilikImage
+      },
+      {
+        title: "Kapalı Alanlar",
+        subtitle: "Doğal Hava Kalitesi",
+        description: "Kentsel ve kapalı ortamlarda GREENSY, orman havasının ferahlığını günlük yaşama getirir. Alerjenleri, tozu ve zararlı mikroorganizmaları nötralize eder.",
+        image: kapaliImage
+      },
+      {
+        title: "Gıda Endüstrisi",
+        subtitle: "Hijyen ve Güvenlik",
+        description: "Gıda üretim ortamlarında hava kalitesi kritik öneme sahiptir. GREENSY hijyeni destekler, kontaminasyon riskini azaltır ve raf ömrünü doğal olarak uzatır.",
+        image: gidaImage
+      }
+    ],
+    en: [
+      {
+        title: "Agriculture",
+        subtitle: "Sustainable Agriculture Technology", 
+        description: "GREENSY is revolutionizing modern agriculture. With negative ion technology, it strengthens plants' natural immune systems, minimizes chemical use, and increases productivity.",
+        image: tarimImage
+      },
+      {
+        title: "Livestock",
+        subtitle: "Animal Health and Productivity",
+        description: "In enclosed livestock facilities, GREENSY neutralizes harmful gases such as ammonia and carbon dioxide, protecting animal health and increasing production efficiency.",
+        image: hayvancilikImage
+      },
+      {
+        title: "Indoor Spaces",
+        subtitle: "Natural Air Quality",
+        description: "In urban and indoor environments, GREENSY brings the freshness of forest air into everyday life. It neutralizes allergens, dust, and harmful microorganisms.",
+        image: kapaliImage
+      },
+      {
+        title: "Food Industry",
+        subtitle: "Hygiene and Safety",
+        description: "Air quality is critical in food production environments. GREENSY supports hygiene, reduces contamination risk, and extends shelf life naturally.",
+        image: gidaImage
+      }
+    ]
+  };
 
-    {/* Areas Grid */}
-    <section className="areas-grid-section">
-      <div className="container">
-        <div className="areas-grid">
-          {/* Agriculture */}
-          <div className="area-card agriculture-card">
-            <div className="area-card-header">
-              <div className="area-icon">🌿</div>
-              <h3 className="area-title">
-                {lang === 'tr' ? 'Tarım' : 'Agriculture'}
-              </h3>
-            </div>
-            <p className="area-description">
-              {lang === 'tr' 
-                ? 'GREENSY, çiftçilerin kimyasal girdiyi azaltmasına yardımcı olurken bitki sağlığını ve toprak canlılığını iyileştirir.'
-                : 'GREENSY helps farmers reduce chemical input while improving plant health and soil vitality.'
-              }
-            </p>
-            <ul className="area-benefits">
-              <li>{lang === 'tr' ? 'Bitki bağışıklığını ve kök gelişimini uyarır' : 'Stimulates plant immunity and root growth'}</li>
-              <li>{lang === 'tr' ? 'Kimyasal gübre ve pestisit ihtiyacını azaltır' : 'Reduces the need for chemical fertilizers and pesticides'}</li>
-              <li>{lang === 'tr' ? 'Faydalı toprak mikroorganizmalarını aktifleştirir' : 'Activates beneficial soil microorganisms'}</li>
-              <li>{lang === 'tr' ? 'Çimlenme oranlarını ve meyve kalitesini iyileştirir' : 'Improves germination rates and fruit quality'}</li>
-              <li>{lang === 'tr' ? 'Sürdürülebilir şekilde genel verimi artırır' : 'Increases overall yield in a sustainable way'}</li>
-            </ul>
-            <div className="area-applications">
-              <h4>{lang === 'tr' ? '✅ Uygulamalar:' : '✅ Applications:'}</h4>
-              <div className="application-tags">
-                <span className="tag">{lang === 'tr' ? 'Yüksek teknoloji seraları' : 'High-tech greenhouses'}</span>
-                <span className="tag">{lang === 'tr' ? 'Organik çiftlikler' : 'Organic farms'}</span>
-                <span className="tag">{lang === 'tr' ? 'Toprak iyileştirme programları' : 'Soil recovery programs'}</span>
-                <span className="tag">{lang === 'tr' ? 'Açık alan sebze ve meyve üretimi' : 'Open-field vegetable and fruit production'}</span>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 4);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (sliderRef.current) {
+      const track = sliderRef.current.querySelector('.slider-track');
+      if (track) {
+        track.style.transform = `translateX(-${currentSlide * 25}%)`;
+      }
+    }
+  }, [currentSlide]);
+
+  const goToSlide = (slideIndex) => {
+    setCurrentSlide(slideIndex);
+  };
+
+  const currentContent = slideContent[lang][currentSlide];
+
+  return (
+    <div className="areas-page">
+      {/* Main Content Section */}
+      <section className="areas-main-section">
+        <div className="container">
+          <div className="areas-main-content">
+            {/* Left Side - Text Content */}
+            <div className="areas-text-content">
+              <div className="content-card">
+                <h2 className="content-title">{currentContent.title}</h2>
+                <h3 className="content-subtitle">{currentContent.subtitle}</h3>
+                <p className="content-description">{currentContent.description}</p>
               </div>
             </div>
-          </div>
 
-          {/* Livestock */}
-          <div className="area-card livestock-card">
-            <div className="area-card-header">
-              <div className="area-icon">🐄</div>
-              <h3 className="area-title">
-                {lang === 'tr' ? 'Hayvancılık' : 'Livestock'}
-              </h3>
-            </div>
-            <p className="area-description">
-              {lang === 'tr' 
-                ? 'GREENSY, amonyak (NH₃) ve karbon dioksit (CO₂) gibi zararlı gazları nötralize ederek kapalı hayvancılık tesislerindeki hava kalitesini iyileştirir.'
-                : 'GREENSY improves air quality in enclosed livestock facilities by neutralizing harmful gases such as ammonia (NH₃) and carbon dioxide (CO₂).'
-              }
-            </p>
-            <ul className="area-benefits">
-              <li>{lang === 'tr' ? 'Hayvan stresini ve solunum sorunlarını azaltır' : 'Reduces animal stress and respiratory issues'}</li>
-              <li>{lang === 'tr' ? 'Ölüm oranlarını ve enfeksiyon risklerini düşürür' : 'Lowers mortality rates and infection risks'}</li>
-              <li>{lang === 'tr' ? 'Büyüme performansını ve yem dönüşümünü artırır' : 'Enhances growth performance and feed conversion'}</li>
-              <li>{lang === 'tr' ? 'Et ve süt kalitesini iyileştirir' : 'Improves meat and milk quality'}</li>
-              <li>{lang === 'tr' ? 'Ortamdaki çalışanların sağlığını korur' : 'Protects the health of workers in the environment'}</li>
-            </ul>
-            <div className="area-applications">
-              <h4>{lang === 'tr' ? '✅ Uygulamalar:' : '✅ Applications:'}</h4>
-              <div className="application-tags">
-                <span className="tag">{lang === 'tr' ? 'Kümes çiftlikleri' : 'Poultry farms'}</span>
-                <span className="tag">{lang === 'tr' ? 'İnek ahırları' : 'Cow barns'}</span>
-                <span className="tag">{lang === 'tr' ? 'Domuz çiftlikleri' : 'Pig farms'}</span>
-                <span className="tag">{lang === 'tr' ? 'Kapalı üretim birimleri' : 'Indoor breeding units'}</span>
-                <span className="tag">{lang === 'tr' ? 'Yoğun hayvancılık işletmeleri' : 'Intensive livestock operations'}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Indoor Spaces */}
-          <div className="area-card indoor-card">
-            <div className="area-card-header">
-              <div className="area-icon">🏠</div>
-              <h3 className="area-title">
-                {lang === 'tr' ? 'Kapalı Alanlar' : 'Indoor Spaces'}
-              </h3>
-            </div>
-            <p className="area-description">
-              {lang === 'tr' 
-                ? 'Kentsel ve kapalı ortamlarda, GREENSY orman havasının ferahlığını günlük yaşama getirir.'
-                : 'In urban and indoor environments, GREENSY brings the freshness of forest air into everyday life.'
-              }
-            </p>
-            <ul className="area-benefits">
-              <li>{lang === 'tr' ? 'Alerjenleri, tozu, bakterileri ve virüsleri nötralize eder' : 'Neutralizes allergens, dust, bacteria, and viruses'}</li>
-              <li>{lang === 'tr' ? 'Temizlik ürünleri veya elektroniklerden kaynaklanan iç mekan hava kirliliğini azaltır' : 'Reduces indoor air pollution from cleaning products or electronics'}</li>
-              <li>{lang === 'tr' ? 'Zihinsel rahatlama ve konsantrasyonu destekler' : 'Promotes mental relaxation and concentration'}</li>
-              <li>{lang === 'tr' ? 'Kimyasal olmadan genel solunum konforunu artırır' : 'Enhances overall respiratory comfort without chemicals'}</li>
-            </ul>
-            <div className="area-applications">
-              <h4>{lang === 'tr' ? '✅ Uygulamalar:' : '✅ Applications:'}</h4>
-              <div className="application-tags">
-                <span className="tag">{lang === 'tr' ? 'Evler ve apartmanlar' : 'Homes and apartments'}</span>
-                <span className="tag">{lang === 'tr' ? 'Ofisler ve ortak çalışma alanları' : 'Offices and coworking spaces'}</span>
-                <span className="tag">{lang === 'tr' ? 'Okullar ve kreşler' : 'Schools and nurseries'}</span>
-                <span className="tag">{lang === 'tr' ? 'Sağlık merkezleri' : 'Healthcare centers'}</span>
-                <span className="tag">{lang === 'tr' ? 'Sağlık ve yoga stüdyoları' : 'Wellness and yoga studios'}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Food Industry */}
-          <div className="area-card food-card">
-            <div className="area-card-header">
-              <div className="area-icon">🏭</div>
-              <h3 className="area-title">
-                {lang === 'tr' ? 'Gıda Endüstrisi' : 'Food Industry'}
-              </h3>
-            </div>
-            <p className="area-description">
-              {lang === 'tr' 
-                ? 'Hava kalitesi gıda üretim ortamlarında kritik öneme sahiptir. GREENSY hijyeni destekler, kontaminasyon riskini azaltır ve raf ömrünü doğal olarak uzatır.'
-                : 'Air quality is critical in food production environments. GREENSY supports hygiene, reduces contamination risk, and extends shelf life naturally.'
-              }
-            </p>
-            <ul className="area-benefits">
-              <li>{lang === 'tr' ? 'Havadaki mikrobiyal yükü minimize eder' : 'Minimizes airborne microbial load'}</li>
-              <li>{lang === 'tr' ? 'Temiz üretim havasının korunmasına yardımcı olur' : 'Helps maintain clean production air'}</li>
-              <li>{lang === 'tr' ? 'Gıda güvenliği için düzenleyici uyumluluğu destekler' : 'Supports regulatory compliance for food safety'}</li>
-              <li>{lang === 'tr' ? 'Kimyasal dezenfektanlara olan bağımlılığı azaltır' : 'Reduces reliance on chemical disinfectants'}</li>
-            </ul>
-            <div className="area-applications">
-              <h4>{lang === 'tr' ? '✅ Uygulamalar:' : '✅ Applications:'}</h4>
-              <div className="application-tags">
-                <span className="tag">{lang === 'tr' ? 'Gıda paketleme hatları' : 'Food packaging lines'}</span>
-                <span className="tag">{lang === 'tr' ? 'Soğuk depolama odaları' : 'Cold storage rooms'}</span>
-                <span className="tag">{lang === 'tr' ? 'Taze ürün tesisleri' : 'Fresh produce facilities'}</span>
-                <span className="tag">{lang === 'tr' ? 'Hasat sonrası işleme alanları' : 'Post-harvest handling areas'}</span>
+            {/* Right Side - Slider */}
+            <div className="areas-slider-container">
+              <div className="slider-wrapper">
+                <div className="slider-container" ref={sliderRef}>
+                  <button 
+                    className="slider-arrow slider-arrow-left" 
+                    onClick={() => goToSlide((currentSlide - 1 + 4) % 4)}
+                    aria-label="Previous slide"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                  
+                  <div className="slider-track">
+                    {slideContent[lang].map((slide, index) => (
+                      <div key={index} className="slider-slide">
+                        <img src={slide.image} alt={slide.title} />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <button 
+                    className="slider-arrow slider-arrow-right" 
+                    onClick={() => goToSlide((currentSlide + 1) % 4)}
+                    aria-label="Next slide"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                
+                <div className="slider-dots">
+                  {slideContent[lang].map((_, index) => (
+                    <span 
+                      key={index}
+                      className={`dot ${currentSlide === index ? 'active' : ''}`} 
+                      onClick={() => goToSlide(index)}
+                    ></span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-
-  </div>
-);
+      </section>
+    </div>
+  );
+};
 const Hakkimizda = ({ lang }) => {
   return (
     <div className="about-page">
