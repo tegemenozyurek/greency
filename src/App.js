@@ -9,11 +9,7 @@ import product1 from './images/product/1.png';
 import product2 from './images/product/2.png';
 import product3 from './images/product/3.png';
 import product4 from './images/product/4.png';
-import slider1 from './images/slider/1.png';
-import slider2 from './images/slider/2.png';
-import slider3 from './images/slider/3.png';
-import slider4 from './images/slider/4.png';
-import slider5 from './images/slider/5.png';
+
 import suntekLogo from './images/suntek.png';
 
 // Import field images for usage areas slider
@@ -87,29 +83,6 @@ const AnaSayfa = ({ lang, translations }) => (
 );
 
 const Urun = ({ lang }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const sliderRef = useRef(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 5);
-    }, 4000); // 4 saniyede bir değiş
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (sliderRef.current) {
-      const track = sliderRef.current.querySelector('.slider-track');
-      if (track) {
-        track.style.transform = `translateX(-${currentSlide * 20}%)`;
-      }
-    }
-  }, [currentSlide]);
-
-  const goToSlide = (slideIndex) => {
-    setCurrentSlide(slideIndex);
-  };
 
   return (
   <div className="urun-page">
@@ -427,85 +400,7 @@ const Urun = ({ lang }) => {
       </div>
     </section>
 
-    {/* Gallery Slider Section */}
-    <section className="gallery-section">
-      <div className="container">
-        <div className="gallery-content">
-          <div className="gallery-text">
-            <h2 className="section-title">
-              {lang === 'tr' ? 'Galeri' : 'Gallery'}
-            </h2>
-            <p className="gallery-description">
-              {lang === 'tr' 
-                ? 'GREENSY teknolojisinin farklı uygulama alanlarından görüntüler'
-                : 'Images from different application areas of GREENSY technology'
-              }
-            </p>
-          </div>
-          <div className="gallery-slider" ref={sliderRef}>
-            <div className="slider-container">
-              <button 
-                className="slider-arrow slider-arrow-left" 
-                onClick={() => goToSlide((currentSlide - 1 + 5) % 5)}
-                aria-label="Previous slide"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-              <div className="slider-track">
-                <div className="slider-slide">
-                  <img src={slider1} alt="GREENSY Gallery 1" />
-                </div>
-                <div className="slider-slide">
-                  <img src={slider2} alt="GREENSY Gallery 2" />
-                </div>
-                <div className="slider-slide">
-                  <img src={slider3} alt="GREENSY Gallery 3" />
-                </div>
-                <div className="slider-slide">
-                  <img src={slider4} alt="GREENSY Gallery 4" />
-                </div>
-                <div className="slider-slide">
-                  <img src={slider5} alt="GREENSY Gallery 5" />
-                </div>
-              </div>
-              <button 
-                className="slider-arrow slider-arrow-right" 
-                onClick={() => goToSlide((currentSlide + 1) % 5)}
-                aria-label="Next slide"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
-            <div className="slider-dots">
-              <span 
-                className={`dot ${currentSlide === 0 ? 'active' : ''}`} 
-                onClick={() => goToSlide(0)}
-              ></span>
-              <span 
-                className={`dot ${currentSlide === 1 ? 'active' : ''}`} 
-                onClick={() => goToSlide(1)}
-              ></span>
-              <span 
-                className={`dot ${currentSlide === 2 ? 'active' : ''}`} 
-                onClick={() => goToSlide(2)}
-              ></span>
-              <span 
-                className={`dot ${currentSlide === 3 ? 'active' : ''}`} 
-                onClick={() => goToSlide(3)}
-              ></span>
-              <span 
-                className={`dot ${currentSlide === 4 ? 'active' : ''}`} 
-                onClick={() => goToSlide(4)}
-              ></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </div>
   );
 };
