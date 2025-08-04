@@ -66,19 +66,6 @@ const Navbar = ({ lang, setLang, translations }) => {
             </Link>
           </li>
         ))}
-        {/* Mobilde dil seçici tek element olarak menüde göster */}
-        <li className="navbar-lang-mobile">
-          <Link
-            to="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setLang(lang === 'tr' ? 'en' : 'tr');
-            }}
-            className="mobile-lang-toggle"
-          >
-            {lang === 'tr' ? 'TR | EN' : 'EN | TR'}
-          </Link>
-        </li>
       </ul>
       {/* Masaüstünde ve mobilde menü kapalıyken sağda göster */}
       <div className="navbar-lang-btn navbar-lang-desktop" aria-label="Dil seçimi" style={{ display: menuOpen ? 'none' : 'flex' }}>
