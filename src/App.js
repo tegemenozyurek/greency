@@ -560,12 +560,24 @@ const Hakkimizda = ({ lang }) => {
         <div className="about-hero-content">
           <div className="about-hero-text">
             <h1 className="about-hero-title">
-              {lang === 'tr' ? 'Hakkımızda' : 'About Us'}
+              {lang === 'tr' ? (
+                <>
+                  <span className="green-text">Bilim ve Doğayı</span>
+                  <br />
+                  <span className="white-text">Buluşturan Güç</span>
+                </>
+              ) : (
+                <>
+                  <span className="green-text">The Power That</span>
+                  <br />
+                  <span className="white-text">Unites Science and Nature</span>
+                </>
+              )}
             </h1>
             <p className="about-hero-description">
               {lang === 'tr' 
-                ? 'Doğanın gücünü bilimle birleştirerek, sürdürülebilir bir gelecek için çalışıyoruz.'
-                : 'We work for a sustainable future by combining the power of nature with science.'
+                ? 'Sun-Tek Ekoloji, doğanın gücünü bilimle birleştirerek sürdürülebilir bir gelecek için çalışır. GREENSY teknolojimiz, negatif iyonların doğal arındırıcı etkisini modern yaşamın her alanına taşır.'
+                : 'Sun-Tek Ecology works for a sustainable future by combining the power of nature with science. Our GREENSY technology brings the natural purifying effect of negative ions to every area of modern life.'
               }
             </p>
           </div>
