@@ -582,9 +582,7 @@ const Hakkimizda = ({ lang }) => {
             </p>
           </div>
           <div className="about-hero-visual">
-            <div className="about-logo">
-              <img src={suntekLogo} alt="Sun-Tek Logo" className="suntek-logo" />
-            </div>
+            <img src={suntekLogo} alt="Sun-Tek Logo" className="suntek-logo" />
           </div>
         </div>
       </section>
