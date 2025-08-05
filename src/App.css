@@ -2687,10 +2687,25 @@ body {
 }
 
 .story-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
   padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.story-content.section-alternate-right {
+  grid-template-columns: 1fr 1fr;
+}
+
+.story-content.section-alternate-right > div:first-child {
+  order: 2;
+}
+
+.story-content.section-alternate-right > div:last-child {
+  order: 1;
 }
 
 .story-text {
@@ -2717,10 +2732,25 @@ body {
 }
 
 .purpose-content {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
   padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.purpose-content.section-alternate-left {
+  grid-template-columns: 1fr 1fr;
+}
+
+.purpose-content.section-alternate-left > div:first-child {
+  order: 1;
+}
+
+.purpose-content.section-alternate-left > div:last-child {
+  order: 2;
 }
 
 .purpose-intro {
@@ -2781,10 +2811,25 @@ body {
 }
 
 .values-content {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
   padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.values-content.section-alternate-right {
+  grid-template-columns: 1fr 1fr;
+}
+
+.values-content.section-alternate-right > div:first-child {
+  order: 2;
+}
+
+.values-content.section-alternate-right > div:last-child {
+  order: 1;
 }
 
 .values-grid {
@@ -2916,6 +2961,40 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
   }
+  
+  .story-content,
+  .purpose-content,
+  .values-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .story-content > div,
+  .purpose-content > div,
+  .values-content > div {
+    order: unset !important;
+  }
+  
+  .section-alternate-left,
+  .section-alternate-right {
+    text-align: center;
+  }
+  
+  .section-alternate-left .section-title,
+  .section-alternate-right .section-title {
+    text-align: center;
+  }
+  
+  .section-alternate-left .story-text,
+  .section-alternate-left .purpose-intro,
+  .section-alternate-left .purpose-conclusion,
+  .section-alternate-left .values-conclusion,
+  .section-alternate-right .story-text,
+  .section-alternate-right .purpose-intro,
+  .section-alternate-right .purpose-conclusion,
+  .section-alternate-right .values-conclusion {
+    text-align: center;
+  }
 }
 
 @media (max-width: 700px) {
@@ -2992,5 +3071,36 @@ body {
   .value-item h3 {
     font-size: 1.1rem;
   }
+}
+
+/* Alternating Section Layouts */
+.section-alternate-left {
+  text-align: left;
+}
+
+.section-alternate-right {
+  text-align: right;
+}
+
+.section-alternate-left .section-title {
+  text-align: left;
+}
+
+.section-alternate-right .section-title {
+  text-align: right;
+}
+
+.section-alternate-left .story-text,
+.section-alternate-left .purpose-intro,
+.section-alternate-left .purpose-conclusion,
+.section-alternate-left .values-conclusion {
+  text-align: left;
+}
+
+.section-alternate-right .story-text,
+.section-alternate-right .purpose-intro,
+.section-alternate-right .purpose-conclusion,
+.section-alternate-right .values-conclusion {
+  text-align: right;
 }
 

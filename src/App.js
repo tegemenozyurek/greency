@@ -590,10 +590,12 @@ const Hakkimizda = ({ lang }) => {
       {/* Story Section */}
       <section className="about-story">
         <div className="container">
-          <div className="story-content">
-            <h2 className="section-title">
-              {lang === 'tr' ? 'Hikayemiz' : 'Our Story'}
-            </h2>
+          <div className="story-content section-alternate-right">
+            <div>
+              <h2 className="section-title">
+                {lang === 'tr' ? 'Hikayemiz' : 'Our Story'}
+              </h2>
+            </div>
             <div className="story-text">
               <p>
                 {lang === 'tr' 
@@ -615,42 +617,46 @@ const Hakkimizda = ({ lang }) => {
       {/* Purpose Section */}
       <section className="about-purpose">
         <div className="container">
-          <div className="purpose-content">
-            <h2 className="section-title">
-              {lang === 'tr' ? 'Amacımız' : 'Our Purpose'}
-            </h2>
-            <p className="purpose-intro">
-              {lang === 'tr' 
-                ? 'Günümüzde karşılaştığımız çevresel zorluklar, doğal çözümler gerektiriyor. GREENSY, bu zorluklara karşı doğanın kendi yöntemlerini kullanarak çözüm sunuyor.'
-                : 'The environmental challenges we face today require natural solutions. GREENSY offers solutions to these challenges using nature\'s own methods.'
-              }
-            </p>
-            
-            <div className="challenges-grid">
-              <div className="challenge-item">
-                <div className="challenge-icon">🌾</div>
-                <h3>{lang === 'tr' ? 'Tarımsal Verimlilik' : 'Agricultural Productivity'}</h3>
-              </div>
-              <div className="challenge-item">
-                <div className="challenge-icon">🏭</div>
-                <h3>{lang === 'tr' ? 'Hava Kalitesi' : 'Air Quality'}</h3>
-              </div>
-              <div className="challenge-item">
-                <div className="challenge-icon">🐄</div>
-                <h3>{lang === 'tr' ? 'Hayvan Sağlığı' : 'Animal Health'}</h3>
-              </div>
-              <div className="challenge-item">
-                <div className="challenge-icon">🏠</div>
-                <h3>{lang === 'tr' ? 'Yaşam Kalitesi' : 'Quality of Life'}</h3>
-              </div>
+          <div className="purpose-content section-alternate-left">
+            <div>
+              <h2 className="section-title">
+                {lang === 'tr' ? 'Amacımız' : 'Our Purpose'}
+              </h2>
             </div>
-            
-            <p className="purpose-conclusion">
-              {lang === 'tr' 
-                ? 'GREENSY, bu alanlarda doğal ve etkili çözümler sunarak, hem çevresel hem de ekonomik sürdürülebilirliği destekler.'
-                : 'GREENSY supports both environmental and economic sustainability by offering natural and effective solutions in these areas.'
-              }
-            </p>
+            <div>
+              <p className="purpose-intro">
+                {lang === 'tr' 
+                  ? 'Günümüzde karşılaştığımız çevresel zorluklar, doğal çözümler gerektiriyor. GREENSY, bu zorluklara karşı doğanın kendi yöntemlerini kullanarak çözüm sunuyor.'
+                  : 'The environmental challenges we face today require natural solutions. GREENSY offers solutions to these challenges using nature\'s own methods.'
+                }
+              </p>
+              
+              <div className="challenges-grid">
+                <div className="challenge-item">
+                  <div className="challenge-icon">🌾</div>
+                  <h3>{lang === 'tr' ? 'Tarımsal Verimlilik' : 'Agricultural Productivity'}</h3>
+                </div>
+                <div className="challenge-item">
+                  <div className="challenge-icon">🏭</div>
+                  <h3>{lang === 'tr' ? 'Hava Kalitesi' : 'Air Quality'}</h3>
+                </div>
+                <div className="challenge-item">
+                  <div className="challenge-icon">🐄</div>
+                  <h3>{lang === 'tr' ? 'Hayvan Sağlığı' : 'Animal Health'}</h3>
+                </div>
+                <div className="challenge-item">
+                  <div className="challenge-icon">🏠</div>
+                  <h3>{lang === 'tr' ? 'Yaşam Kalitesi' : 'Quality of Life'}</h3>
+                </div>
+              </div>
+              
+              <p className="purpose-conclusion">
+                {lang === 'tr' 
+                  ? 'GREENSY, bu alanlarda doğal ve etkili çözümler sunarak, hem çevresel hem de ekonomik sürdürülebilirliği destekler.'
+                  : 'GREENSY supports both environmental and economic sustainability by offering natural and effective solutions in these areas.'
+                }
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -658,36 +664,39 @@ const Hakkimizda = ({ lang }) => {
       {/* Values Section */}
       <section className="about-values">
         <div className="container">
-          <div className="values-content">
-            <h2 className="section-title">
-              {lang === 'tr' ? 'Değerlerimiz' : 'Our Values'}
-            </h2>
-            
-            <div className="values-grid">
-              <div className="value-item">
-                <div className="value-icon">🔬</div>
-                <h3>{lang === 'tr' ? 'Bilimsel Yaklaşım' : 'Scientific Approach'}</h3>
-              </div>
-              <div className="value-item">
-                <div className="value-icon">🌱</div>
-                <h3>{lang === 'tr' ? 'Sürdürülebilirlik' : 'Sustainability'}</h3>
-              </div>
-              <div className="value-item">
-                <div className="value-icon">🤝</div>
-                <h3>{lang === 'tr' ? 'Güvenilirlik' : 'Reliability'}</h3>
-              </div>
-              <div className="value-item">
-                <div className="value-icon">💡</div>
-                <h3>{lang === 'tr' ? 'İnovasyon' : 'Innovation'}</h3>
-              </div>
+          <div className="values-content section-alternate-right">
+            <div>
+              <h2 className="section-title">
+                {lang === 'tr' ? 'Değerlerimiz' : 'Our Values'}
+              </h2>
             </div>
-            
-            <p className="values-conclusion">
-              {lang === 'tr' 
-                ? 'Bu değerler, her kararımızın ve her ürünümüzün temelini oluşturur. Müşterilerimizin güvenini kazanmak ve sürdürülebilir bir gelecek için çalışmak en önemli önceliğimizdir.'
-                : 'These values form the foundation of every decision we make and every product we create. Gaining our customers\' trust and working for a sustainable future is our top priority.'
-              }
-            </p>
+            <div>
+              <div className="values-grid">
+                <div className="value-item">
+                  <div className="value-icon">🔬</div>
+                  <h3>{lang === 'tr' ? 'Bilimsel Yaklaşım' : 'Scientific Approach'}</h3>
+                </div>
+                <div className="value-item">
+                  <div className="value-icon">🌱</div>
+                  <h3>{lang === 'tr' ? 'Sürdürülebilirlik' : 'Sustainability'}</h3>
+                </div>
+                <div className="value-item">
+                  <div className="value-icon">🤝</div>
+                  <h3>{lang === 'tr' ? 'Güvenilirlik' : 'Reliability'}</h3>
+                </div>
+                <div className="value-item">
+                  <div className="value-icon">💡</div>
+                  <h3>{lang === 'tr' ? 'İnovasyon' : 'Innovation'}</h3>
+                </div>
+              </div>
+              
+              <p className="values-conclusion">
+                {lang === 'tr' 
+                  ? 'Bu değerler, her kararımızın ve her ürünümüzün temelini oluşturur. Müşterilerimizin güvenini kazanmak ve sürdürülebilir bir gelecek için çalışmak en önemli önceliğimizdir.'
+                  : 'These values form the foundation of every decision we make and every product we create. Gaining our customers\' trust and working for a sustainable future is our top priority.'
+                }
+              </p>
+            </div>
           </div>
         </div>
       </section>
