@@ -662,39 +662,36 @@ const Hakkimizda = ({ lang }) => {
       {/* Values Section */}
       <section className="about-values">
         <div className="container">
-          <div className="values-content section-alternate-right">
-            <div>
-              <h2 className="section-title">
-                {lang === 'tr' ? 'Değerlerimiz' : 'Our Values'}
-              </h2>
-            </div>
-            <div>
-              <div className="values-grid">
-                <div className="value-item">
-                  <div className="value-icon">🔬</div>
-                  <h3>{lang === 'tr' ? 'Bilimsel Yaklaşım' : 'Scientific Approach'}</h3>
-                </div>
-                <div className="value-item">
-                  <div className="value-icon">🌱</div>
-                  <h3>{lang === 'tr' ? 'Sürdürülebilirlik' : 'Sustainability'}</h3>
-                </div>
-                <div className="value-item">
-                  <div className="value-icon">🤝</div>
-                  <h3>{lang === 'tr' ? 'Güvenilirlik' : 'Reliability'}</h3>
-                </div>
-                <div className="value-item">
-                  <div className="value-icon">💡</div>
-                  <h3>{lang === 'tr' ? 'İnovasyon' : 'Innovation'}</h3>
-                </div>
+          <div className="values-content">
+            <h2 className="section-title">
+              {lang === 'tr' ? 'Değerlerimiz' : 'Our Values'}
+            </h2>
+            
+            <div className="values-grid">
+              <div className="value-item">
+                <div className="value-icon">🔬</div>
+                <h3>{lang === 'tr' ? 'Bilimsel Yaklaşım' : 'Scientific Approach'}</h3>
               </div>
-              
-              <p className="values-conclusion">
-                {lang === 'tr' 
-                  ? 'Bu değerler, her kararımızın ve her ürünümüzün temelini oluşturur. Müşterilerimizin güvenini kazanmak ve sürdürülebilir bir gelecek için çalışmak en önemli önceliğimizdir.'
-                  : 'These values form the foundation of every decision we make and every product we create. Gaining our customers\' trust and working for a sustainable future is our top priority.'
-                }
-              </p>
+              <div className="value-item">
+                <div className="value-icon">🌱</div>
+                <h3>{lang === 'tr' ? 'Sürdürülebilirlik' : 'Sustainability'}</h3>
+              </div>
+              <div className="value-item">
+                <div className="value-icon">🤝</div>
+                <h3>{lang === 'tr' ? 'Güvenilirlik' : 'Reliability'}</h3>
+              </div>
+              <div className="value-item">
+                <div className="value-icon">💡</div>
+                <h3>{lang === 'tr' ? 'İnovasyon' : 'Innovation'}</h3>
+              </div>
             </div>
+            
+            <p className="values-conclusion">
+              {lang === 'tr' 
+                ? 'Bu değerler, her kararımızın ve her ürünümüzün temelini oluşturur. Müşterilerimizin güvenini kazanmak ve sürdürülebilir bir gelecek için çalışmak en önemli önceliğimizdir.'
+                : 'These values form the foundation of every decision we make and every product we create. Gaining our customers\' trust and working for a sustainable future is our top priority.'
+              }
+            </p>
           </div>
         </div>
       </section>
@@ -885,6 +882,34 @@ const Iletisim = ({ lang }) => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [validationErrors, setValidationErrors] = useState([]);
+
+  // Form validasyon mesajlarını Türkçe yap
+  useEffect(() => {
+    if (lang === 'tr') {
+      const inputs = document.querySelectorAll('input, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('invalid', function(e) {
+          e.preventDefault();
+          if (input.validity.valueMissing) {
+            input.setCustomValidity('Bu alan zorunludur');
+          } else if (input.validity.typeMismatch) {
+            if (input.type === 'email') {
+              input.setCustomValidity('Geçerli bir e-posta adresi giriniz');
+            } else {
+              input.setCustomValidity('Geçerli bir değer giriniz');
+            }
+          } else {
+            input.setCustomValidity('');
+          }
+        });
+        
+        input.addEventListener('input', function() {
+          input.setCustomValidity('');
+        });
+      });
+    }
+  }, [lang]);
 
   const handleChange = (e) => {
     setFormData({
@@ -895,6 +920,26 @@ const Iletisim = ({ lang }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Manuel validasyon
+    const errors = [];
+    if (!formData.subject.trim()) {
+      errors.push(lang === 'tr' ? 'Konu alanı zorunludur' : 'Subject field is required');
+    }
+    if (!formData.message.trim()) {
+      errors.push(lang === 'tr' ? 'Mesaj alanı zorunludur' : 'Message field is required');
+    }
+    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.push(lang === 'tr' ? 'Geçerli bir e-posta adresi giriniz' : 'Please enter a valid email address');
+    }
+    
+    if (errors.length > 0) {
+      setValidationErrors(errors);
+      return;
+    }
+    
+    setValidationErrors([]);
+    
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -936,12 +981,16 @@ const Iletisim = ({ lang }) => {
         <section className="iletisim-form-section">
           <div className="iletisim-form-container">
             <div className="iletisim-form">
-              <h2>{lang === 'tr' ? 'Mesaj Gönder' : 'Send Message'}</h2>
+                            <h2>{lang === 'tr' ? 'Mesaj Gönder' : 'Send Message'}</h2>
               
-              {submitStatus === 'success' && (
-                <div className="success-message">
-                  <div className="success-icon">✅</div>
-                  <p>{lang === 'tr' ? 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.' : 'Your message has been sent successfully! We will get back to you as soon as possible.'}</p>
+              {validationErrors.length > 0 && (
+                <div className="error-message">
+                  <div className="error-icon">⚠️</div>
+                  <div>
+                    {validationErrors.map((error, index) => (
+                      <p key={index}>{error}</p>
+                    ))}
+                  </div>
                 </div>
               )}
               
@@ -952,7 +1001,7 @@ const Iletisim = ({ lang }) => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} noValidate>
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name">{lang === 'tr' ? 'Ad Soyad' : 'Full Name'}</label>
@@ -1000,7 +1049,6 @@ const Iletisim = ({ lang }) => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      required
                       placeholder={lang === 'tr' ? 'Mesajınızın konusu' : 'Subject of your message'}
                     />
                   </div>
@@ -1014,7 +1062,6 @@ const Iletisim = ({ lang }) => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="6"
-                    required
                     placeholder={lang === 'tr' ? 'Mesajınızı buraya yazın...' : 'Write your message here...'}
                   ></textarea>
                 </div>

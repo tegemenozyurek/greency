@@ -2294,6 +2294,7 @@ body {
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   position: relative;
+  text-align: left;
 }
 
 .form-group label::after {
@@ -2457,6 +2458,13 @@ body {
   border-color: rgba(220, 38, 38, 0.4);
   color: #f87171;
   box-shadow: 0 8px 32px rgba(220, 38, 38, 0.2);
+}
+
+.error-message p {
+  margin: 0.25rem 0;
+  color: #f87171;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .success-message::before,
@@ -2823,6 +2831,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 200px;
 }
 
 .challenge-item::before {
@@ -2893,22 +2902,25 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
+  text-align: left;
 }
 
-.values-content.section-alternate-right {
-  grid-template-columns: 1fr 1fr;
+.values-content .section-title {
+  text-align: left !important;
+  margin-bottom: 2rem;
+  position: relative;
+  max-width: 600px;
 }
 
-.values-content.section-alternate-right > div:first-child {
-  order: 2;
-}
-
-.values-content.section-alternate-right > div:last-child {
-  order: 1;
+.values-content .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4AC505, #5ad015);
+  border-radius: 2px;
 }
 
 .values-grid {
@@ -2927,6 +2939,12 @@ body {
   backdrop-filter: blur(15px);
   position: relative;
   overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
 }
 
 .value-item::before {
@@ -3123,17 +3141,20 @@ body {
   }
   
   .story-content,
-  .purpose-content {
+  .purpose-content,
+  .values-content {
     text-align: center;
   }
   
   .story-content .section-title,
-  .purpose-content .section-title {
+  .purpose-content .section-title,
+  .values-content .section-title {
     text-align: center !important;
   }
   
   .story-content .section-title::after,
-  .purpose-content .section-title::after {
+  .purpose-content .section-title::after,
+  .values-content .section-title::after {
     left: 50%;
     transform: translateX(-50%);
   }
@@ -3190,7 +3211,8 @@ body {
   }
   
   .story-content,
-  .purpose-content {
+  .purpose-content,
+  .values-content {
     padding: 0 15px;
   }
   
@@ -3209,8 +3231,8 @@ body {
   
   .challenges-grid,
   .values-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 }
 
@@ -3232,19 +3254,26 @@ body {
     font-size: 1rem;
   }
   
+  .challenges-grid,
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
   .challenge-item,
   .value-item {
-    padding: 20px 15px;
+    padding: 12px;
+    min-height: 150px;
   }
   
   .challenge-icon,
   .value-icon {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
   
   .challenge-item h3,
   .value-item h3 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
