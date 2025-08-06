@@ -209,26 +209,31 @@ body {
   padding: 2.5rem 1.5rem 2.5rem 1.5rem;
 }
 .anasayfa-slogan-v2 {
-  font-size: 4.2rem;
+  font-size: 5.5rem;
   font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
   font-weight: 900;
-  margin: 0 0 0.5rem 0;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-  text-shadow: 0 4px 32px #145a32, 0 1px 0 #196f3d;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-shadow: 0 6px 40px rgba(74,197,5,0.5), 0 2px 12px rgba(74,197,5,0.3);
   animation: slogan-fade-in 1.2s cubic-bezier(.7,.2,.3,1);
 }
 .slogan-main {
-  color: #eafaf1;
-  opacity: 0.92;
+  color: #4AC505;
+  opacity: 1;
+  font-weight: 900;
+  text-shadow: 0 4px 24px rgba(74,197,5,0.4), 0 2px 8px rgba(74,197,5,0.2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .slogan-highlight {
-  color: #4AC505;
-  text-shadow: 0 2px 24px #145a32, 0 1px 0 #196f3d;
-  letter-spacing: 0.08em;
-  font-size: 1.25em;
+  color: #27ae60;
+  text-shadow: 0 2px 16px rgba(39,174,96,0.4), 0 1px 6px rgba(39,174,96,0.3);
+  letter-spacing: 0.06em;
+  font-size: 1.15em;
   display: inline-block;
   margin-top: 0.1em;
+  font-weight: 600;
 }
 .anasayfa-tanitim-v2 {
   background: rgba(255,255,255,0.13);
@@ -283,12 +288,14 @@ body {
 .anasayfa-subtitle {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #eafaf1;
-  text-shadow: 0 2px 16px #145a32, 0 1px 0 #196f3d;
+  color: #ffffff;
+  text-shadow: 0 2px 16px rgba(255,255,255,0.3), 0 1px 6px rgba(255,255,255,0.2);
   animation: fade-in 2.5s 0.6s cubic-bezier(.7,.2,.3,1) both;
-  margin-top: 2rem;
-  opacity: 0.9;
-  letter-spacing: 0.02em;
+  margin-top: 1.5rem;
+  opacity: 0.95;
+  letter-spacing: 0.03em;
+  font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
+  font-style: italic;
 }
 @media (max-width: 900px) {
   .anasayfa-overlay--centered {
@@ -296,7 +303,7 @@ body {
     gap: 1.2rem;
   }
   .anasayfa-slogan-v2 {
-    font-size: 2.7rem;
+    font-size: 3.5rem;
   }
   .anasayfa-tanitim-v2 {
     font-size: 1.18rem;
@@ -308,7 +315,7 @@ body {
   }
   .anasayfa-subtitle {
     font-size: 1.4rem;
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
   }
 }
 @media (max-width: 700px) {
@@ -322,9 +329,9 @@ body {
     max-width: 90vw;
   }
   .anasayfa-slogan-v2 {
-    font-size: 1.5rem;
-    line-height: 1.2;
-    margin-bottom: 0.2rem;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
   }
   .anasayfa-tanitim-v2 {
     font-size: 0.95rem;
@@ -339,7 +346,7 @@ body {
     padding: 0.8rem 1.8rem;
   }
   .anasayfa-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 1.2rem;
   }
 }
@@ -354,7 +361,7 @@ body {
     margin-top: 1rem;
   }
   .anasayfa-slogan-v2 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
   .anasayfa-tanitim-v2 {
     font-size: 0.9rem;
@@ -365,7 +372,7 @@ body {
     padding: 0.7rem 1.5rem;
   }
   .anasayfa-subtitle {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-top: 1rem;
   }
 }

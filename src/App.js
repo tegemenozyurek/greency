@@ -30,7 +30,6 @@ const translations = {
     ],
     sloganMain: 'GREENSY',
     sloganSubtitle: 'Gelecek Bize Emanet',
-    sloganHighlight: 'Negatif İyon Jeneratörü',
     tanitim: 'Toprağa, Havaya ve Yaşama Hayat Veren Dönüşüm Teknolojisi',
     incele: 'İncele',
   },
@@ -45,7 +44,6 @@ const translations = {
     ],
     sloganMain: 'GREENSY',
     sloganSubtitle: 'The Future is Entrusted to Us',
-    sloganHighlight: 'Negative Ion Generator',
     tanitim: 'Transformation Technology Giving Life to Soil, Air and Life',
     incele: 'Explore',
   }
@@ -64,13 +62,12 @@ const AnaSayfa = ({ lang, translations }) => (
     />
     <div className="anasayfa-gradient"></div>
     <div className="anasayfa-overlay anasayfa-overlay--centered">
+      <h1 className="anasayfa-slogan-v2">
+        <span className="slogan-main">{translations[lang].sloganMain}</span>
+      </h1>
       <div className="anasayfa-subtitle">
         {translations[lang].sloganSubtitle}
       </div>
-      <h1 className="anasayfa-slogan-v2">
-        <span className="slogan-main">{translations[lang].sloganMain}</span> <br />
-        <span className="slogan-highlight">{translations[lang].sloganHighlight}</span>
-      </h1>
       <div className="anasayfa-tanitim-v2">
         {translations[lang].tanitim}
       </div>
@@ -1108,8 +1105,8 @@ function App() {
         'SSS': 'SSS',
         'İletişim': 'İletişim'
       },
-      sloganMain: 'Gelecek Bize Emanet',
-      sloganHighlight: 'Greensy',
+      sloganMain: 'GREENSY',
+      sloganSubtitle: 'Gelecek Bize Emanet',
       tanitim: 'doğadan ilham alarak geliştirilen, negatif iyon teknolojisiyle tarımda, hayvancılıkta ve yaşam alanlarında devrim yaratan bir dönüşüm teknolojisidir.',
       incele: 'İncele'
     },
@@ -1122,8 +1119,8 @@ function App() {
         'SSS': 'FAQ',
         'İletişim': 'Contact'
       },
-      sloganMain: 'The Future is Entrusted to Us',
-      sloganHighlight: 'Greensy',
+      sloganMain: 'GREENSY',
+      sloganSubtitle: 'The Future is Entrusted to Us',
       tanitim: 'is a transformation technology developed with inspiration from nature, creating a revolution in agriculture, livestock, and living spaces with negative ion technology.',
       incele: 'Explore'
     }
