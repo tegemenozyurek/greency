@@ -590,12 +590,11 @@ const Hakkimizda = ({ lang }) => {
       {/* Story Section */}
       <section className="about-story">
         <div className="container">
-          <div className="story-content section-alternate-right">
-            <div>
-              <h2 className="section-title">
-                {lang === 'tr' ? 'Hikayemiz' : 'Our Story'}
-              </h2>
-            </div>
+          <div className="story-content">
+            <h2 className="section-title">
+              {lang === 'tr' ? 'Hikayemiz' : 'Our Story'}
+            </h2>
+            
             <div className="story-text">
               <p>
                 {lang === 'tr' 
@@ -617,46 +616,45 @@ const Hakkimizda = ({ lang }) => {
       {/* Purpose Section */}
       <section className="about-purpose">
         <div className="container">
-          <div className="purpose-content section-alternate-left">
-            <div>
-              <h2 className="section-title">
-                {lang === 'tr' ? 'Amacımız' : 'Our Purpose'}
-              </h2>
-            </div>
-            <div>
-              <p className="purpose-intro">
+          <div className="purpose-content">
+            <h2 className="section-title">
+              {lang === 'tr' ? 'Amacımız' : 'Our Purpose'}
+            </h2>
+            
+            <div className="purpose-intro">
+              <p>
                 {lang === 'tr' 
                   ? 'Günümüzde karşılaştığımız çevresel zorluklar, doğal çözümler gerektiriyor. GREENSY, bu zorluklara karşı doğanın kendi yöntemlerini kullanarak çözüm sunuyor.'
                   : 'The environmental challenges we face today require natural solutions. GREENSY offers solutions to these challenges using nature\'s own methods.'
                 }
               </p>
-              
-              <div className="challenges-grid">
-                <div className="challenge-item">
-                  <div className="challenge-icon">🌾</div>
-                  <h3>{lang === 'tr' ? 'Tarımsal Verimlilik' : 'Agricultural Productivity'}</h3>
-                </div>
-                <div className="challenge-item">
-                  <div className="challenge-icon">🏭</div>
-                  <h3>{lang === 'tr' ? 'Hava Kalitesi' : 'Air Quality'}</h3>
-                </div>
-                <div className="challenge-item">
-                  <div className="challenge-icon">🐄</div>
-                  <h3>{lang === 'tr' ? 'Hayvan Sağlığı' : 'Animal Health'}</h3>
-                </div>
-                <div className="challenge-item">
-                  <div className="challenge-icon">🏠</div>
-                  <h3>{lang === 'tr' ? 'Yaşam Kalitesi' : 'Quality of Life'}</h3>
-                </div>
-              </div>
-              
-              <p className="purpose-conclusion">
-                {lang === 'tr' 
-                  ? 'GREENSY, bu alanlarda doğal ve etkili çözümler sunarak, hem çevresel hem de ekonomik sürdürülebilirliği destekler.'
-                  : 'GREENSY supports both environmental and economic sustainability by offering natural and effective solutions in these areas.'
-                }
-              </p>
             </div>
+            
+            <div className="challenges-grid">
+              <div className="challenge-item">
+                <div className="challenge-icon">🌾</div>
+                <h3>{lang === 'tr' ? 'Tarımsal Verimlilik' : 'Agricultural Productivity'}</h3>
+              </div>
+              <div className="challenge-item">
+                <div className="challenge-icon">🏭</div>
+                <h3>{lang === 'tr' ? 'Hava Kalitesi' : 'Air Quality'}</h3>
+              </div>
+              <div className="challenge-item">
+                <div className="challenge-icon">🐄</div>
+                <h3>{lang === 'tr' ? 'Hayvan Sağlığı' : 'Animal Health'}</h3>
+              </div>
+              <div className="challenge-item">
+                <div className="challenge-icon">🏠</div>
+                <h3>{lang === 'tr' ? 'Yaşam Kalitesi' : 'Quality of Life'}</h3>
+              </div>
+            </div>
+            
+            <p className="purpose-conclusion">
+              {lang === 'tr' 
+                ? 'GREENSY, bu alanlarda doğal ve etkili çözümler sunarak, hem çevresel hem de ekonomik sürdürülebilirliği destekler.'
+                : 'GREENSY supports both environmental and economic sustainability by offering natural and effective solutions in these areas.'
+              }
+            </p>
           </div>
         </div>
       </section>
