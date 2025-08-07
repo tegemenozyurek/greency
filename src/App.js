@@ -69,12 +69,12 @@ const AnaSayfa = ({ lang, translations }) => (
     />
     <div className="anasayfa-gradient"></div>
     <div className="anasayfa-overlay anasayfa-overlay--centered">
-      <div className="anasayfa-subtitle">
-        {translations[lang].sloganSubtitle}
-      </div>
       <h1 className="anasayfa-slogan-v2">
         <span className="slogan-main">{translations[lang].sloganMain}</span>
       </h1>
+      <div className="anasayfa-subtitle">
+        {translations[lang].sloganSubtitle}
+      </div>
       <div className="anasayfa-tanitim-v2">
         {translations[lang].tanitim}
       </div>
@@ -417,7 +417,7 @@ const Urun = ({ lang }) => {
       <div className="container">
         <div className="cta-grid">
           <div className="cta-text">
-            <h2 className="cta-title" style={{fontFamily: "'Dancing Script', cursive", fontStyle: 'normal', fontWeight: '700'}}>{lang === 'tr' ? 'Gelecek Bize Emanet' : 'The Future is Entrusted to Us'}</h2>
+            <h2 className="cta-title" style={{fontFamily: "'Birthstone', cursive", fontStyle: 'normal', fontWeight: '400'}}>{lang === 'tr' ? 'Gelecek Bize Emanet' : 'The Future is Entrusted to Us'}</h2>
             <p className="cta-description">
               {lang === 'tr' 
                 ? 'GREENSY, sadece bugünün değil; yarının da sağlıklı, verimli ve çevre dostu üretim modeli için geliştirilmiştir.'
