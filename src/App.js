@@ -18,6 +18,13 @@ import hayvancilikImage from './images/fields/hayvancilik.png';
 import kapaliImage from './images/fields/kapali.png';
 import gidaImage from './images/fields/gida.png';
 
+// Import slider images
+import slider1 from './images/slider/1.png';
+import slider2 from './images/slider/2.png';
+import slider3 from './images/slider/3.png';
+import slider4 from './images/slider/4.png';
+import slider5 from './images/slider/5.png';
+
 const translations = {
   tr: {
     nav: [
@@ -62,12 +69,12 @@ const AnaSayfa = ({ lang, translations }) => (
     />
     <div className="anasayfa-gradient"></div>
     <div className="anasayfa-overlay anasayfa-overlay--centered">
-      <h1 className="anasayfa-slogan-v2">
-        <span className="slogan-main">{translations[lang].sloganMain}</span>
-      </h1>
       <div className="anasayfa-subtitle">
         {translations[lang].sloganSubtitle}
       </div>
+      <h1 className="anasayfa-slogan-v2">
+        <span className="slogan-main">{translations[lang].sloganMain}</span>
+      </h1>
       <div className="anasayfa-tanitim-v2">
         {translations[lang].tanitim}
       </div>
@@ -80,6 +87,38 @@ const AnaSayfa = ({ lang, translations }) => (
 );
 
 const Urun = ({ lang }) => {
+  const [currentSliderSlide, setCurrentSliderSlide] = useState(0);
+  const sliderRef = useRef(null);
+
+  const sliderImages = [slider1, slider2, slider3, slider4, slider5];
+
+  const goToSliderSlide = (slideIndex) => {
+    setCurrentSliderSlide(slideIndex);
+    if (sliderRef.current) {
+      const track = sliderRef.current.querySelector('.slider-track');
+      if (track) {
+        track.style.transform = `translateX(-${slideIndex * 20}%)`;
+      }
+    }
+  };
+
+  const nextSliderSlide = () => {
+    const nextSlide = (currentSliderSlide + 1) % sliderImages.length;
+    goToSliderSlide(nextSlide);
+  };
+
+  const prevSliderSlide = () => {
+    const prevSlide = (currentSliderSlide - 1 + sliderImages.length) % sliderImages.length;
+    goToSliderSlide(prevSlide);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSliderSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentSliderSlide]);
 
   return (
   <div className="urun-page">
@@ -118,6 +157,8 @@ const Urun = ({ lang }) => {
         </div>
       </div>
     </section>
+
+
 
     {/* Introduction Section */}
     <section className="intro-section">
@@ -392,6 +433,59 @@ const Urun = ({ lang }) => {
           </div>
           <div className="cta-visual">
             <img src={product4} alt="GREENSY Future" className="future-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Gallery Section */}
+    <section className="gallery-section">
+      <div className="container">
+        <div className="gallery-header">
+          <h2 className="gallery-title">{lang === 'tr' ? 'Galeri' : 'Gallery'}</h2>
+          <div className="gallery-subtitle">
+            {lang === 'tr' 
+              ? 'GREENSY Teknolojisinin Görsel Sunumu'
+              : 'Visual Presentation of GREENSY Technology'
+            }
+          </div>
+        </div>
+        <div className="slider-container" ref={sliderRef}>
+          <div className="slider-wrapper">
+            <div className="slider-track">
+              {sliderImages.map((image, index) => (
+                <div key={index} className="slider-slide">
+                  <img src={image} alt={`GREENSY Gallery ${index + 1}`} />
+                </div>
+              ))}
+            </div>
+            <button 
+              className="slider-arrow slider-arrow-left" 
+              onClick={prevSliderSlide}
+              aria-label="Previous slide"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <button 
+              className="slider-arrow slider-arrow-right" 
+              onClick={nextSliderSlide}
+              aria-label="Next slide"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <div className="slider-dots">
+            {sliderImages.map((_, index) => (
+              <span 
+                key={index}
+                className={`dot ${currentSliderSlide === index ? 'active' : ''}`}
+                onClick={() => goToSliderSlide(index)}
+              ></span>
+            ))}
           </div>
         </div>
       </div>
