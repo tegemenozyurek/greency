@@ -286,7 +286,8 @@ body {
 }
 
 .anasayfa-subtitle {
-  font-size: 1.8rem;
+  font-family: 'Dancing Script', cursive !important;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #ffffff;
   text-shadow: 0 2px 16px rgba(255,255,255,0.3), 0 1px 6px rgba(255,255,255,0.2);
@@ -294,8 +295,17 @@ body {
   margin-top: 1.5rem;
   opacity: 0.95;
   letter-spacing: 0.03em;
-  font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
-  font-style: italic;
+  font-style: normal !important;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @media (max-width: 900px) {
   .anasayfa-overlay--centered {
@@ -1181,8 +1191,10 @@ body {
 }
 
 .cta-title {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-family: 'Dancing Script', cursive !important;
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
   margin-bottom: 2rem;
   background: linear-gradient(135deg, #4AC505, #5ad015);
   -webkit-background-clip: text;

@@ -417,7 +417,7 @@ const Urun = ({ lang }) => {
       <div className="container">
         <div className="cta-grid">
           <div className="cta-text">
-            <h2 className="cta-title">{lang === 'tr' ? 'Gelecek Bize Emanet' : 'The Future is Entrusted to Us'}</h2>
+            <h2 className="cta-title" style={{fontFamily: "'Dancing Script', cursive", fontStyle: 'normal', fontWeight: '700'}}>{lang === 'tr' ? 'Gelecek Bize Emanet' : 'The Future is Entrusted to Us'}</h2>
             <p className="cta-description">
               {lang === 'tr' 
                 ? 'GREENSY, sadece bugünün değil; yarının da sağlıklı, verimli ve çevre dostu üretim modeli için geliştirilmiştir.'
