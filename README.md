@@ -1,70 +1,175 @@
-# Getting Started with Create React App
+# 🌱 GREENSY - Transformation Technology
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18.0.0-blue.svg)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-16.0.0-green.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## Available Scripts
+> **Transformation Technology Giving Life to Soil, Air and Life**
 
-In the project directory, you can run:
+<div align="center">
+  <img src="src/images/greensy.png" alt="GREENSY Logo" width="200"/>
+  
+  *The Future is Entrusted to Us*
+</div>
 
-### `npm start`
+## 📖 About the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+GREENSY is a transformation technology developed with inspiration from nature, creating a revolution in agriculture, livestock, and living spaces with negative ion technology. This website is developed for the introduction and information of GREENSY technology.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🌟 Features
 
-### `npm test`
+- **Responsive Design**: Perfect appearance on all devices
+- **Multi-language Support**: Turkish and English language support
+- **Modern UI/UX**: User-friendly and modern interface
+- **Animations**: Smooth transitions and interactions
+- **SEO Optimized**: Search engine friendly structure
+- **Performance**: Fast loading and optimized code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🛠️ Technology Stack
 
-### `npm run build`
+- **Frontend**: React 18, React Router
+- **Styling**: CSS3, Custom Fonts (Microgramma, Birthstone)
+- **Build Tool**: Create React App
+- **Deployment**: Ready for production deployment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (v16 or higher)
+- npm or yarn
 
-### `npm run eject`
+### Steps
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/greency.git
+   cd greency
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Start development server**
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Open in your browser**
+   ```
+   http://localhost:3000
+   ```
 
-## Learn More
+## 📁 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+greency/
+├── public/                 # Static files
+├── src/
+│   ├── fonts/             # Custom fonts
+│   │   ├── microgrammanormal.ttf
+│   │   └── DancingScript-Bold.ttf
+│   ├── images/            # Images
+│   │   ├── fields/        # Usage areas
+│   │   ├── product/       # Product images
+│   │   └── slider/        # Slider images
+│   ├── App.js             # Main application component
+│   ├── App.css            # Main style file
+│   ├── Navbar.js          # Navigation component
+│   └── Footer.js          # Footer component
+├── package.json
+└── README.md
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎨 Pages
 
-### Code Splitting
+### 🏠 Home Page
+- GREENSY technology introduction
+- Video background
+- Call-to-action buttons
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🔬 Our Technology
+- Detailed technology explanation
+- Benefits and features
+- Gallery section
 
-### Analyzing the Bundle Size
+### 🌾 Areas of Use
+- Agricultural applications
+- Livestock solutions
+- Indoor space usage
+- Food industry
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 👥 About Us
+- Company story
+- Mission and vision
+- Our values
 
-### Making a Progressive Web App
+### ❓ FAQ
+- Frequently asked questions
+- Detailed answers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 📞 Contact
+- Contact form
+- Email integration
 
-### Advanced Configuration
+## 🎯 Feature Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Responsive Design
+- Mobile-first approach
+- Tablet and desktop optimization
+- Flexible grid system
 
-### Deployment
+### Performance
+- Lazy loading
+- Optimized images
+- Minimal bundle size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Accessibility
+- WCAG compliant
+- Keyboard navigation
+- Screen reader support
 
-### `npm run build` fails to minify
+## 🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Production Build
+```bash
+npm run build
+```
+
+### Deployment Options
+- **Netlify**: Automatic deployment
+- **Vercel**: Serverless deployment
+- **GitHub Pages**: Static hosting
+- **AWS S3**: Cloud hosting
+
+## 🤝 Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **Email**: info@suntekekoloji.com
+- **Website**: [suntekekoloji.com](https://suntekekoloji.com)
+- **LinkedIn**: [Sun-Tek Ecology](https://linkedin.com/company/sun-tek-ekoloji)
+
+## 🙏 Acknowledgments
+
+- React team
+- Create React App team
+- All contributors
+
+---
+
+<div align="center">
+  <strong>🌱 GREENSY - Nature's Power, Modern Technology</strong>
+</div>
