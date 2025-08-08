@@ -88,6 +88,7 @@ const AnaSayfa = ({ lang, translations }) => (
 
 const Urun = ({ lang }) => {
   const [currentSliderSlide, setCurrentSliderSlide] = useState(0);
+  const [showStickyButton, setShowStickyButton] = useState(false);
   const sliderRef = useRef(null);
 
   const sliderImages = [slider1, slider2, slider3, slider4, slider5];
@@ -119,6 +120,50 @@ const Urun = ({ lang }) => {
 
     return () => clearInterval(interval);
   }, [currentSliderSlide]);
+
+  // Scroll detection for sticky button
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      
+      // Show button after scrolling down 300px
+      if (scrollPosition > 300) {
+        setShowStickyButton(true);
+      } else {
+        setShowStickyButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleContactClick = () => {
+    // Open email application with language-specific content
+    const emailSubject = lang === 'tr' 
+      ? encodeURIComponent('GREENSY Teknolojisi Hakkında Bilgi Almak İstiyorum')
+      : encodeURIComponent('Request for Information About GREENSY Technology');
+    
+    const emailBody = lang === 'tr' 
+      ? encodeURIComponent(`Merhaba,
+
+GREENSY negatif iyon teknolojisi hakkında detaylı bilgi almak istiyorum. 
+
+Benimle en kısa zamanda iletişime geçebilir misiniz?
+
+Teşekkürler.`)
+      : encodeURIComponent(`Hello,
+
+I would like to receive detailed information about GREENSY negative ion technology.
+
+Could you please contact me as soon as possible?
+
+Thank you.`);
+    
+    const mailtoLink = `mailto:info@suntekekoloji.com?subject=${emailSubject}&body=${emailBody}`;
+    window.open(mailtoLink, '_blank');
+  };
 
   return (
   <div className="urun-page">
@@ -473,6 +518,17 @@ const Urun = ({ lang }) => {
       </div>
     </section>
 
+    {/* Sticky Contact Button */}
+    {showStickyButton && (
+      <div className="sticky-contact-button" onClick={handleContactClick}>
+        <div className="sticky-button-content">
+          <span className="sticky-button-text">
+            {lang === 'tr' ? 'Bilgi Al' : 'Get Info'}
+          </span>
+        </div>
+        <div className="sticky-button-pulse"></div>
+      </div>
+    )}
 
   </div>
   );
