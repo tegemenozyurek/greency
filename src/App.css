@@ -493,7 +493,7 @@ body {
 }
 
 .product-image {
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
   height: auto;
   border-radius: 2rem;
@@ -502,7 +502,7 @@ body {
 }
 
 .product-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 .floating-elements {
@@ -1219,6 +1219,11 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Teknolojimiz sayfasındaki CTA başlığı için özel stil */
+.urun-page .cta-title {
+  font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif !important;
 }
 
 .cta-description {
