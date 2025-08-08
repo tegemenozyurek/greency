@@ -122,18 +122,6 @@ const Urun = ({ lang }) => {
 
   return (
   <div className="urun-page">
-    {/* Floating Info Button */}
-    <div className="floating-info-button">
-      <a href={lang === 'tr' 
-        ? "mailto:info@sunteknoloji.com?subject=GREENSY Hakkında Bilgi&body=Merhaba,%0D%0A%0D%0AGREENSY teknolojisi hakkında detaylı bilgi almak istiyorum.%0D%0A%0D%0ATeşekkürler."
-        : "mailto:info@sunteknoloji.com?subject=Information About GREENSY&body=Hello,%0D%0A%0D%0AI would like to get detailed information about GREENSY technology.%0D%0A%0D%0AThank you."
-      } className="info-btn">
-        <span className="info-btn-text">{lang === 'tr' ? 'Bilgi Al' : 'Get Info'}</span>
-        <svg className="info-btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </a>
-    </div>
 
     {/* Hero Section */}
     <section className="hero-section">

@@ -1490,74 +1490,9 @@ body {
   }
 }
 
-/* Floating Info Button */
-.floating-info-button {
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
-  z-index: 1000;
-}
 
-.info-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, #4AC505, #5ad015);
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 8px 32px rgba(74,197,5,0.3);
-  transition: all 0.3s ease;
-  animation: pulse 2s ease-in-out infinite;
-  text-decoration: none;
-}
 
-.info-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(74,197,5,0.4);
-  background: linear-gradient(135deg, #5ad015, #4AC505);
-}
 
-.info-btn-text {
-  white-space: nowrap;
-}
-
-.info-btn-icon {
-  transition: transform 0.3s ease;
-}
-
-.info-btn:hover .info-btn-icon {
-  transform: scale(1.1);
-}
-
-/* Responsive for floating button */
-@media (max-width: 700px) {
-  .floating-info-button {
-    bottom: 80px;
-    right: 20px;
-  }
-  
-  .info-btn {
-    padding: 0.8rem 1.2rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .floating-info-button {
-    bottom: 70px;
-    right: 15px;
-  }
-  
-  .info-btn {
-    padding: 0.7rem 1rem;
-    font-size: 0.85rem;
-  }
-}
 
 /* Responsive for how section */
 @media (max-width: 900px) {
