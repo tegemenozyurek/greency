@@ -1392,12 +1392,18 @@ body {
   }
   
   .hero-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: 'Microgramma', 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
   }
   
   .title-subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   
   .what-content {
@@ -1426,7 +1432,17 @@ body {
   }
   
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  
+  .title-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .hero-description {
+    font-size: 0.85rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
   
   .section-title {
@@ -1448,7 +1464,17 @@ body {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  
+  .title-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   
   .section-title {
