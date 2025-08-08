@@ -3769,10 +3769,13 @@ body {
 .gallery-section .container {
   position: relative;
   z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .gallery-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
 }
 
@@ -3789,8 +3792,7 @@ body {
   content: '';
   position: absolute;
   bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 80px;
   height: 4px;
   background: linear-gradient(90deg, #4ade80, #22c55e);
@@ -3807,7 +3809,7 @@ body {
 }
 
 .gallery-section .slider-container {
-  max-width: 900px;
+  max-width: 1300px;
   margin: 0 auto;
   position: relative;
   padding-bottom: 20px;
@@ -3837,7 +3839,7 @@ body {
 
 .gallery-section .slider-slide img {
   width: 100%;
-  height: 500px;
+  height: 700px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -3922,20 +3924,20 @@ body {
   transform: scale(1.1);
 }
 
-/* Responsive Design for Gallery Section */
+/* Responsive Design for Gallery Section - Mobile First */
 @media (max-width: 1200px) {
   .gallery-section .slider-container {
-    max-width: 800px;
+    max-width: 98vw;
   }
   
   .gallery-section .slider-slide img {
-    height: 450px;
+    height: 650px;
   }
 }
 
 @media (max-width: 900px) {
   .gallery-section {
-    padding: 3rem 0 1.5rem 0;
+    padding: 3rem 0 2rem 0;
   }
   
   .gallery-title {
@@ -3946,12 +3948,16 @@ body {
     font-size: 1.1rem;
   }
   
+  .gallery-section .container {
+    padding: 0 1.5rem;
+  }
+  
   .gallery-section .slider-container {
-    max-width: 700px;
+    max-width: 95vw;
   }
   
   .gallery-section .slider-slide img {
-    height: 400px;
+    height: 600px;
   }
   
   .gallery-section .slider-arrow {
@@ -3967,7 +3973,7 @@ body {
 
 @media (max-width: 700px) {
   .gallery-section {
-    padding: 2rem 0 1rem 0;
+    padding: 2rem 0 1.5rem 0;
   }
   
   .gallery-title {
@@ -3978,17 +3984,31 @@ body {
     font-size: 1rem;
   }
   
+  .gallery-section .container {
+    padding: 0 1rem;
+  }
+  
   .gallery-section .slider-container {
-    max-width: 500px;
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .gallery-section .slider-wrapper {
+    border-radius: 15px;
   }
   
   .gallery-section .slider-slide img {
-    height: 350px;
+    height: 400px;
   }
   
   .gallery-section .slider-arrow {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
+  }
+  
+  .gallery-section .slider-arrow svg {
+    width: 17px;
+    height: 17px;
   }
   
   .gallery-section .slider-arrow-left {
@@ -3997,6 +4017,11 @@ body {
   
   .gallery-section .slider-arrow-right {
     right: 15px;
+  }
+  
+  .gallery-section .slider-dots {
+    margin-top: 20px;
+    gap: 10px;
   }
   
   .gallery-section .dot {
@@ -4018,18 +4043,26 @@ body {
     font-size: 0.9rem;
   }
   
+  .gallery-section .container {
+    padding: 0 0.5rem;
+  }
+  
   .gallery-section .slider-container {
     max-width: 100%;
-    margin: 0 10px;
+    margin: 0;
+  }
+  
+  .gallery-section .slider-wrapper {
+    border-radius: 12px;
   }
   
   .gallery-section .slider-slide img {
-    height: 250px;
+    height: 320px;
   }
   
   .gallery-section .slider-arrow {
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
   }
   
   .gallery-section .slider-arrow svg {
@@ -4047,12 +4080,62 @@ body {
   
   .gallery-section .slider-dots {
     gap: 8px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   
   .gallery-section .dot {
     width: 8px;
     height: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .gallery-section {
+    padding: 1rem 0 0.5rem 0;
+  }
+  
+  .gallery-title {
+    font-size: 1.5rem;
+  }
+  
+  .gallery-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .gallery-section .container {
+    padding: 0 0.25rem;
+  }
+  
+  .gallery-section .slider-slide img {
+    height: 280px;
+  }
+  
+  .gallery-section .slider-arrow {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .gallery-section .slider-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .gallery-section .slider-arrow-left {
+    left: 8px;
+  }
+  
+  .gallery-section .slider-arrow-right {
+    right: 8px;
+  }
+  
+  .gallery-section .slider-dots {
+    gap: 6px;
+    margin-top: 12px;
+  }
+  
+  .gallery-section .dot {
+    width: 6px;
+    height: 6px;
   }
 }
 

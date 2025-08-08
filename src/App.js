@@ -442,13 +442,7 @@ const Urun = ({ lang }) => {
     <section className="gallery-section">
       <div className="container">
         <div className="gallery-header">
-          <h2 className="gallery-title">{lang === 'tr' ? 'Galeri' : 'Gallery'}</h2>
-          <div className="gallery-subtitle">
-            {lang === 'tr' 
-              ? 'GREENSY Teknolojisinin Görsel Sunumu'
-              : 'Visual Presentation of GREENSY Technology'
-            }
-          </div>
+          <h2 className="gallery-title">{lang === 'tr' ? 'Seramızdan Görüntüler' : 'Images from Our Factory'}</h2>
         </div>
         <div className="slider-container" ref={sliderRef}>
           <div className="slider-wrapper">
