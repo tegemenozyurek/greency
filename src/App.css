@@ -11,7 +11,7 @@ body {
 
 .App {
   text-align: center;
-  background: #145a32;
+  background: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
