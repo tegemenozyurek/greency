@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -25,36 +25,7 @@ import slider3 from './images/slider/3.png';
 import slider4 from './images/slider/4.png';
 import slider5 from './images/slider/5.png';
 
-const translations = {
-  tr: {
-    nav: [
-      { to: '/anasayfa', label: 'Ana Sayfa' },
-      { to: '/urun', label: 'Teknolojimiz' },
-      { to: '/kullanim-alanlari', label: 'Kullanım Alanları' },
-      { to: '/hakkimizda', label: 'Hakkımızda' },
-      { to: '/sss', label: 'SSS' },
-      { to: '/iletisim', label: 'İletişim' },
-    ],
-    sloganMain: 'GREENSY',
-    sloganSubtitle: 'Gelecek Bize Emanet',
-    tanitim: 'Toprağa, Havaya ve Yaşama Hayat Veren Dönüşüm Teknolojisi',
-    incele: 'İncele',
-  },
-  en: {
-    nav: [
-      { to: '/anasayfa', label: 'Home' },
-      { to: '/urun', label: 'Our Technology' },
-      { to: '/kullanim-alanlari', label: 'Areas of Use' },
-      { to: '/hakkimizda', label: 'About' },
-      { to: '/sss', label: 'FAQ' },
-      { to: '/iletisim', label: 'Contact' },
-    ],
-    sloganMain: 'GREENSY',
-    sloganSubtitle: 'The Future is Entrusted to Us',
-    tanitim: 'Transformation Technology Giving Life to Soil, Air and Life',
-    incele: 'Explore',
-  }
-};
+// ... existing code ...
 
 const AnaSayfa = ({ lang, translations }) => (
   <div className="anasayfa-hero">
@@ -103,10 +74,10 @@ const Urun = ({ lang }) => {
     }
   };
 
-  const nextSliderSlide = () => {
+  const nextSliderSlide = useCallback(() => {
     const nextSlide = (currentSliderSlide + 1) % sliderImages.length;
     goToSliderSlide(nextSlide);
-  };
+  }, [currentSliderSlide, sliderImages.length]);
 
   const prevSliderSlide = () => {
     const prevSlide = (currentSliderSlide - 1 + sliderImages.length) % sliderImages.length;
@@ -119,13 +90,12 @@ const Urun = ({ lang }) => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentSliderSlide]);
+  }, [currentSliderSlide, nextSliderSlide]);
 
   // Scroll detection for sticky button
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
       
       // Show button after scrolling down 300px
       if (scrollPosition > 300) {
