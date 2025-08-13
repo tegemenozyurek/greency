@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/greency/static/css/main.28e6346d.css",
+    "main.js": "/greency/static/js/main.aa0869d7.js",
+    "static/js/453.8bc7c8a9.chunk.js": "/greency/static/js/453.8bc7c8a9.chunk.js",
+    "static/media/tarim.png": "/greency/static/media/tarim.1b6b2a45118feebca683.png",
+    "static/media/kapali.png": "/greency/static/media/kapali.3ca52d476d59534f2ebc.png",
+    "static/media/gida.png": "/greency/static/media/gida.4c0b1fdf285686a18f93.png",
+    "static/media/hayvancilik.png": "/greency/static/media/hayvancilik.0f0852548d9716f8297d.png",
+    "static/media/3.png": "/greency/static/media/3.df8b6f18e8f0ca792adc.png",
+    "static/media/1.png": "/greency/static/media/1.b890f9e2b04072335be6.png",
+    "static/media/5.png": "/greency/static/media/5.1aa2126346d976806f90.png",
+    "static/media/4.png": "/greency/static/media/4.32e65e090f5be853cac0.png",
+    "static/media/2.png": "/greency/static/media/2.b5da231d4f2424616185.png",
+    "static/media/suntek.png": "/greency/static/media/suntek.d18dc28ebec1be0970cc.png",
+    "static/media/microgrammanormal.ttf": "/greency/static/media/microgrammanormal.fcefae698977ac91f7c4.ttf",
+    "static/media/greensy.png": "/greency/static/media/greensy.dd65645bf361bbc68e90.png",
+    "index.html": "/greency/index.html",
+    "main.28e6346d.css.map": "/greency/static/css/main.28e6346d.css.map",
+    "main.aa0869d7.js.map": "/greency/static/js/main.aa0869d7.js.map",
+    "453.8bc7c8a9.chunk.js.map": "/greency/static/js/453.8bc7c8a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28e6346d.css",
+    "static/js/main.aa0869d7.js"
+  ]
+}
