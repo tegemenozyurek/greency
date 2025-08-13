@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/greency/static/css/main.28e6346d.css",
-    "main.js": "/greency/static/js/main.aa0869d7.js",
+    "main.js": "/greency/static/js/main.9734ae59.js",
     "static/js/453.8bc7c8a9.chunk.js": "/greency/static/js/453.8bc7c8a9.chunk.js",
     "static/media/tarim.png": "/greency/static/media/tarim.1b6b2a45118feebca683.png",
     "static/media/kapali.png": "/greency/static/media/kapali.3ca52d476d59534f2ebc.png",
@@ -17,11 +17,11 @@
     "static/media/greensy.png": "/greency/static/media/greensy.dd65645bf361bbc68e90.png",
     "index.html": "/greency/index.html",
     "main.28e6346d.css.map": "/greency/static/css/main.28e6346d.css.map",
-    "main.aa0869d7.js.map": "/greency/static/js/main.aa0869d7.js.map",
+    "main.9734ae59.js.map": "/greency/static/js/main.9734ae59.js.map",
     "453.8bc7c8a9.chunk.js.map": "/greency/static/js/453.8bc7c8a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28e6346d.css",
-    "static/js/main.aa0869d7.js"
+    "static/js/main.9734ae59.js"
   ]
 }
