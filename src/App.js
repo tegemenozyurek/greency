@@ -112,20 +112,20 @@ const Urun = ({ lang }) => {
   const handleContactClick = () => {
     // Open email application with language-specific content
     const emailSubject = lang === 'tr' 
-      ? encodeURIComponent('GREENSY Teknolojisi Hakkında Bilgi Almak İstiyorum')
-      : encodeURIComponent('Request for Information About GREENSY Technology');
+      ? encodeURIComponent('GREENCY Teknolojisi Hakkında Bilgi Almak İstiyorum')
+      : encodeURIComponent('Request for Information About GREENCY Technology');
     
     const emailBody = lang === 'tr' 
       ? encodeURIComponent(`Merhaba,
 
-GREENSY negatif iyon teknolojisi hakkında detaylı bilgi almak istiyorum. 
+GREENCY negatif iyon teknolojisi hakkında detaylı bilgi almak istiyorum. 
 
 Benimle en kısa zamanda iletişime geçebilir misiniz?
 
 Teşekkürler.`)
       : encodeURIComponent(`Hello,
 
-I would like to receive detailed information about GREENSY negative ion technology.
+I would like to receive detailed information about GREENCY negative ion technology.
 
 Could you please contact me as soon as possible?
 
@@ -143,7 +143,7 @@ Thank you.`);
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title">
-            <span className="title-line">GREENSY</span>
+            <span className="title-line">GREENCY</span>
             <span className="title-subtitle">{lang === 'tr' ? 'Negatif İyon Jeneratörü' : 'Negative Ion Generator'}</span>
           </h1>
           <p className="hero-description">
@@ -155,7 +155,7 @@ Thank you.`);
         </div>
         <div className="hero-visual">
           <div className="product-showcase">
-            <img src={product1} alt="GREENSY" className="product-image" />
+            <img src={product1} alt="GREENCY" className="product-image" />
           </div>
         </div>
       </div>
@@ -216,8 +216,8 @@ Thank you.`);
               </p>
               <p>
                 {lang === 'tr' 
-                  ? 'Ve biz, doğanın bu arındırıcı gücünü şimdi size GREENSY ile sunuyoruz.'
-                  : 'And we now offer you this purifying power of nature with GREENSY.'
+                  ? 'Ve biz, doğanın bu arındırıcı gücünü şimdi size GREENCY ile sunuyoruz.'
+                  : 'And we now offer you this purifying power of nature with GREENCY.'
                 }
               </p>
             </div>
@@ -226,32 +226,32 @@ Thank you.`);
       </div>
     </section>
 
-    {/* What is GREENSY */}
+    {/* What is GREENCY */}
     <section className="what-section">
       <div className="container">
         <div className="what-content">
           <div className="what-text">
             <h2 className="section-title">
-              {lang === 'tr' ? '💡 GREENSY Nedir?' : '💡 What is GREENSY?'}
+              {lang === 'tr' ? '💡 GREENCY Nedir?' : '💡 What is GREENCY?'}
             </h2>
             <p className="what-description">
               {lang === 'tr' 
-                ? 'GREENSY, doğadaki şelale, fırtına, orman gibi ortamlarda doğal olarak oluşan negatif iyonları, soğuk plazma teknolojisi ile kontrollü biçimde ortama yayan yenilikçi bir çözümdür.'
-                : 'GREENSY is an innovative solution that naturally generates negative ions in environments like waterfalls, storms, and forests, and distributes them into the environment in a controlled manner using cold plasma technology.'
+                ? 'GREENCY, doğadaki şelale, fırtına, orman gibi ortamlarda doğal olarak oluşan negatif iyonları, soğuk plazma teknolojisi ile kontrollü biçimde ortama yayan yenilikçi bir çözümdür.'
+                : 'GREENCY is an innovative solution that naturally generates negative ions in environments like waterfalls, storms, and forests, and distributes them into the environment in a controlled manner using cold plasma technology.'
               }
             </p>
             <div className="emphasis-box">
               <p>{lang === 'tr' ? 'Ama o sadece bir cihaz değil;' : 'But it\'s not just a device;'}</p>
               <p>
                 {lang === 'tr' 
-                  ? 'GREENSY, toprağı canlandıran, bitkileri güçlendiren, hayvanları rahatlatan ve havayı temizleyen bütünsel bir ekosistem teknolojisidir.'
-                  : 'GREENSY is a holistic ecosystem technology that revitalizes soil, strengthens plants, relaxes animals, and purifies air.'
+                  ? 'GREENCY, toprağı canlandıran, bitkileri güçlendiren, hayvanları rahatlatan ve havayı temizleyen bütünsel bir ekosistem teknolojisidir.'
+                  : 'GREENCY is a holistic ecosystem technology that revitalizes soil, strengthens plants, relaxes animals, and purifies air.'
                 }
               </p>
             </div>
           </div>
           <div className="what-visual">
-            <img src={product2} alt="GREENSY Technology" className="tech-image" />
+            <img src={product2} alt="GREENCY Technology" className="tech-image" />
             <div className="tech-overlay">
               <div className="tech-spec">
                 <span className="spec-label">{lang === 'tr' ? 'Teknoloji' : 'Technology'}</span>
@@ -271,12 +271,12 @@ Thank you.`);
     <section className="benefits-section">
       <div className="container">
         <h2 className="section-title">
-          {lang === 'tr' ? 'GREENSY\'nin Faydaları' : 'Benefits of GREENSY'}
+          {lang === 'tr' ? 'GREENCY\'nin Faydaları' : 'Benefits of GREENCY'}
         </h2>
         <div className="benefits-grid">
           <div className="benefit-item">
             <div className="benefit-icon">🌱</div>
-            <h3>{lang === 'tr' ? 'Tarımda GREENSY\'nin Katkıları' : 'GREENSY\'s Contributions to Agriculture'}</h3>
+            <h3>{lang === 'tr' ? 'Tarımda GREENCY\'nin Katkıları' : 'GREENCY\'s Contributions to Agriculture'}</h3>
             <ul className="benefit-list">
               <li>{lang === 'tr' ? 'Daha az kimyasal kullanımıyla doğal üretim' : 'Natural production with less chemical use'}</li>
               <li>{lang === 'tr' ? 'Güçlü kök gelişimi, hızlı çimlenme' : 'Strong root development, rapid germination'}</li>
@@ -323,8 +323,8 @@ Thank you.`);
                 <h3>{lang === 'tr' ? 'İyonizasyon Süreci' : 'Ionization Process'}</h3>
                 <p>
                   {lang === 'tr' 
-                    ? 'GREENSY, havadaki oksijen moleküllerine düşük akımlı, yüksek voltajlı bir elektrik alan uygular.'
-                    : 'GREENSY applies a low-current, high-voltage electric field to oxygen molecules in the air.'
+                    ? 'GREENCY, havadaki oksijen moleküllerine düşük akımlı, yüksek voltajlı bir elektrik alan uygular.'
+                    : 'GREENCY applies a low-current, high-voltage electric field to oxygen molecules in the air.'
                   }
                 </p>
 
@@ -361,7 +361,7 @@ Thank you.`);
           </div>
           
           <div className="how-visual">
-            <img src={product3} alt="GREENSY Working Principle" className="how-image" />
+            <img src={product3} alt="GREENCY Working Principle" className="how-image" />
             <div className="how-overlay">
               <div className="tech-info">
                 <div className="tech-item">
@@ -423,19 +423,19 @@ Thank you.`);
             <h2 className="cta-title" style={{fontFamily: "'Birthstone', cursive", fontStyle: 'normal', fontWeight: '400'}}>{lang === 'tr' ? 'Gelecek Bize Emanet' : 'The Future is Entrusted to Us'}</h2>
             <p className="cta-description">
               {lang === 'tr' 
-                ? 'GREENSY, sadece bugünün değil; yarının da sağlıklı, verimli ve çevre dostu üretim modeli için geliştirilmiştir.'
-                : 'GREENSY is developed not only for today but also for tomorrow\'s healthy, efficient and environmentally friendly production model.'
+                ? 'GREENCY, sadece bugünün değil; yarının da sağlıklı, verimli ve çevre dostu üretim modeli için geliştirilmiştir.'
+                : 'GREENCY is developed not only for today but also for tomorrow\'s healthy, efficient and environmentally friendly production model.'
               }
             </p>
             <p className="cta-subdescription">
               {lang === 'tr' 
-                ? 'Eğer doğayla uyumlu, sürdürülebilir ve yenilikçi bir çözüm arıyorsanız, GREENSY doğru adrestir.'
-                : 'If you are looking for a nature-compatible, sustainable and innovative solution, GREENSY is the right address.'
+                ? 'Eğer doğayla uyumlu, sürdürülebilir ve yenilikçi bir çözüm arıyorsanız, GREENCY doğru adrestir.'
+                : 'If you are looking for a nature-compatible, sustainable and innovative solution, GREENCY is the right address.'
               }
             </p>
           </div>
           <div className="cta-visual">
-            <img src={product4} alt="GREENSY Future" className="future-image" />
+            <img src={product4} alt="GREENCY Future" className="future-image" />
           </div>
         </div>
       </div>
@@ -452,7 +452,7 @@ Thank you.`);
             <div className="slider-track">
               {sliderImages.map((image, index) => (
                 <div key={index} className="slider-slide">
-                  <img src={image} alt={`GREENSY Gallery ${index + 1}`} />
+                  <img src={image} alt={`GREENCY Gallery ${index + 1}`} />
                 </div>
               ))}
             </div>
@@ -513,25 +513,25 @@ const KullanimAlanlari = ({ lang }) => {
       {
         title: "Tarım",
         subtitle: "Sürdürülebilir Tarım Teknolojisi",
-        description: "GREENSY, modern tarımda devrim yaratıyor. Negatif iyon teknolojisi ile bitkilerin doğal bağışıklık sistemini güçlendirir, kimyasal kullanımını minimize eder ve verimliliği artırır.",
+        description: "GREENCY, modern tarımda devrim yaratıyor. Negatif iyon teknolojisi ile bitkilerin doğal bağışıklık sistemini güçlendirir, kimyasal kullanımını minimize eder ve verimliliği artırır.",
         image: tarimImage
       },
       {
         title: "Hayvancılık", 
         subtitle: "Hayvan Sağlığı ve Verimlilik",
-        description: "Kapalı hayvancılık tesislerinde GREENSY, amonyak ve karbon dioksit gibi zararlı gazları nötralize ederek hayvan sağlığını korur ve üretim verimliliğini artırır.",
+        description: "Kapalı hayvancılık tesislerinde GREENCY, amonyak ve karbon dioksit gibi zararlı gazları nötralize ederek hayvan sağlığını korur ve üretim verimliliğini artırır.",
         image: hayvancilikImage
       },
       {
         title: "Kapalı Alanlar",
         subtitle: "Doğal Hava Kalitesi",
-        description: "Kentsel ve kapalı ortamlarda GREENSY, orman havasının ferahlığını günlük yaşama getirir. Alerjenleri, tozu ve zararlı mikroorganizmaları nötralize eder.",
+        description: "Kentsel ve kapalı ortamlarda GREENCY, orman havasının ferahlığını günlük yaşama getirir. Alerjenleri, tozu ve zararlı mikroorganizmaları nötralize eder.",
         image: kapaliImage
       },
       {
         title: "Gıda Endüstrisi",
         subtitle: "Hijyen ve Güvenlik",
-        description: "Gıda üretim ortamlarında hava kalitesi kritik öneme sahiptir. GREENSY hijyeni destekler, kontaminasyon riskini azaltır ve raf ömrünü doğal olarak uzatır.",
+        description: "Gıda üretim ortamlarında hava kalitesi kritik öneme sahiptir. GREENCY hijyeni destekler, kontaminasyon riskini azaltır ve raf ömrünü doğal olarak uzatır.",
         image: gidaImage
       }
     ],
@@ -539,25 +539,25 @@ const KullanimAlanlari = ({ lang }) => {
       {
         title: "Agriculture",
         subtitle: "Sustainable Agriculture Technology", 
-        description: "GREENSY is revolutionizing modern agriculture. With negative ion technology, it strengthens plants' natural immune systems, minimizes chemical use, and increases productivity.",
+        description: "GREENCY is revolutionizing modern agriculture. With negative ion technology, it strengthens plants' natural immune systems, minimizes chemical use, and increases productivity.",
         image: tarimImage
       },
       {
         title: "Livestock",
         subtitle: "Animal Health and Productivity",
-        description: "In enclosed livestock facilities, GREENSY neutralizes harmful gases such as ammonia and carbon dioxide, protecting animal health and increasing production efficiency.",
+        description: "In enclosed livestock facilities, GREENCY neutralizes harmful gases such as ammonia and carbon dioxide, protecting animal health and increasing production efficiency.",
         image: hayvancilikImage
       },
       {
         title: "Indoor Spaces",
         subtitle: "Natural Air Quality",
-        description: "In urban and indoor environments, GREENSY brings the freshness of forest air into everyday life. It neutralizes allergens, dust, and harmful microorganisms.",
+        description: "In urban and indoor environments, GREENCY brings the freshness of forest air into everyday life. It neutralizes allergens, dust, and harmful microorganisms.",
         image: kapaliImage
       },
       {
         title: "Food Industry",
         subtitle: "Hygiene and Safety",
-        description: "Air quality is critical in food production environments. GREENSY supports hygiene, reduces contamination risk, and extends shelf life naturally.",
+        description: "Air quality is critical in food production environments. GREENCY supports hygiene, reduces contamination risk, and extends shelf life naturally.",
         image: gidaImage
       }
     ]
@@ -675,8 +675,8 @@ const Hakkimizda = ({ lang }) => {
             </h1>
             <p className="about-hero-description">
               {lang === 'tr' 
-                ? 'Sun-Tek Ekoloji, doğanın gücünü bilimle birleştirerek sürdürülebilir bir gelecek için çalışır. GREENSY teknolojimiz, negatif iyonların doğal arındırıcı etkisini modern yaşamın her alanına taşır.'
-                : 'Sun-Tek Ecology works for a sustainable future by combining the power of nature with science. Our GREENSY technology brings the natural purifying effect of negative ions to every area of modern life.'
+                ? 'Sun-Tek Ekoloji, doğanın gücünü bilimle birleştirerek sürdürülebilir bir gelecek için çalışır. GREENCY teknolojimiz, negatif iyonların doğal arındırıcı etkisini modern yaşamın her alanına taşır.'
+                : 'Sun-Tek Ecology works for a sustainable future by combining the power of nature with science. Our GREENCY technology brings the natural purifying effect of negative ions to every area of modern life.'
               }
             </p>
           </div>
@@ -703,8 +703,8 @@ const Hakkimizda = ({ lang }) => {
               </p>
               <p>
                 {lang === 'tr' 
-                  ? 'Bu araştırmalar bizi negatif iyonların gücüne götürdü. Doğanın bu arındırıcı gücünü modern teknolojiyle birleştirerek GREENSY\'yi geliştirdik.'
-                  : 'This research led us to the power of negative ions. We developed GREENSY by combining this purifying power of nature with modern technology.'
+                  ? 'Bu araştırmalar bizi negatif iyonların gücüne götürdü. Doğanın bu arındırıcı gücünü modern teknolojiyle birleştirerek GREENCY\'yi geliştirdik.'
+                  : 'This research led us to the power of negative ions. We developed GREENCY by combining this purifying power of nature with modern technology.'
                 }
               </p>
             </div>
@@ -723,8 +723,8 @@ const Hakkimizda = ({ lang }) => {
             <div className="purpose-intro">
               <p>
                 {lang === 'tr' 
-                  ? 'Günümüzde karşılaştığımız çevresel zorluklar, doğal çözümler gerektiriyor. GREENSY, bu zorluklara karşı doğanın kendi yöntemlerini kullanarak çözüm sunuyor.'
-                  : 'The environmental challenges we face today require natural solutions. GREENSY offers solutions to these challenges using nature\'s own methods.'
+                  ? 'Günümüzde karşılaştığımız çevresel zorluklar, doğal çözümler gerektiriyor. GREENCY, bu zorluklara karşı doğanın kendi yöntemlerini kullanarak çözüm sunuyor.'
+                  : 'The environmental challenges we face today require natural solutions. GREENCY offers solutions to these challenges using nature\'s own methods.'
                 }
               </p>
             </div>
@@ -750,8 +750,8 @@ const Hakkimizda = ({ lang }) => {
             
             <p className="purpose-conclusion">
               {lang === 'tr' 
-                ? 'GREENSY, bu alanlarda doğal ve etkili çözümler sunarak, hem çevresel hem de ekonomik sürdürülebilirliği destekler.'
-                : 'GREENSY supports both environmental and economic sustainability by offering natural and effective solutions in these areas.'
+                ? 'GREENCY, bu alanlarda doğal ve etkili çözümler sunarak, hem çevresel hem de ekonomik sürdürülebilirliği destekler.'
+                : 'GREENCY supports both environmental and economic sustainability by offering natural and effective solutions in these areas.'
               }
             </p>
           </div>
@@ -822,8 +822,8 @@ const Hakkimizda = ({ lang }) => {
               </h2>
               <p className="vision-text">
                 {lang === 'tr'
-                  ? 'GREENSY teknolojisini dünya çapında tanınan, güvenilir ve etkili bir çözüm haline getirerek, doğa dostu yaşamın standart haline gelmesine öncülük etmek.'
-                  : 'To lead the way in making eco-friendly living the standard by making GREENSY technology a globally recognized, reliable, and effective solution.'
+                  ? 'GREENCY teknolojisini dünya çapında tanınan, güvenilir ve etkili bir çözüm haline getirerek, doğa dostu yaşamın standart haline gelmesine öncülük etmek.'
+                  : 'To lead the way in making eco-friendly living the standard by making GREENCY technology a globally recognized, reliable, and effective solution.'
                 }
               </p>
               <ul className="mission-list">
@@ -843,78 +843,78 @@ const SSS = ({ lang }) => {
   const faqData = {
     tr: [
       {
-        question: "1. GREENSY nedir ve nasıl çalışır?",
-        answer: "GREENSY, doğadaki negatif iyonları taklit eden bir negatif iyon jeneratörüdür. Soğuk plazma teknolojisiyle havadaki oksijen moleküllerini iyonize eder ve negatif iyonları ortama kontrollü şekilde salar. Bu iyonlar, zararlı gazları (örneğin amonyak, CO₂), tozları ve mikroorganizmaları etkisiz hale getirerek hava kalitesini artırır, bitki gelişimini destekler, hayvan sağlığını iyileştirir."
+        question: "1. GREENCY nedir ve nasıl çalışır?",
+        answer: "GREENCY, doğadaki negatif iyonları taklit eden bir negatif iyon jeneratörüdür. Soğuk plazma teknolojisiyle havadaki oksijen moleküllerini iyonize eder ve negatif iyonları ortama kontrollü şekilde salar. Bu iyonlar, zararlı gazları (örneğin amonyak, CO₂), tozları ve mikroorganizmaları etkisiz hale getirerek hava kalitesini artırır, bitki gelişimini destekler, hayvan sağlığını iyileştirir."
       },
       {
-        question: "2. Tarımda GREENSY ne işe yarar?",
-        answer: "GREENSY sayesinde: Bitkilerin bağışıklığı artar, kimyasal gübre ve pestisit ihtiyacı azalır, toprak mikroorganizmaları aktive olur, verimlilik artarken, kalıntı riski sıfırlanır. Özellikle seralarda ve açık alan tarımında güvenle kullanılabilir."
+        question: "2. Tarımda GREENCY ne işe yarar?",
+        answer: "GREENCY sayesinde: Bitkilerin bağışıklığı artar, kimyasal gübre ve pestisit ihtiyacı azalır, toprak mikroorganizmaları aktive olur, verimlilik artarken, kalıntı riski sıfırlanır. Özellikle seralarda ve açık alan tarımında güvenle kullanılabilir."
       },
       {
         question: "3. Hayvancılıkta nasıl bir katkı sağlar?",
-        answer: "GREENSY, ahır ve kümes gibi kapalı ortamlardaki amonyak (NH₃) ve karbon dioksit (CO₂) oranını düşürerek: Hayvanlarda stresi ve hastalık riskini azaltır, solunumu ve genel sağlık durumunu iyileştirir, et ve süt kalitesini artırır, ölüm oranlarını düşürür. Ayrıca çalışanlar için daha sağlıklı bir ortam sunar."
+        answer: "GREENCY, ahır ve kümes gibi kapalı ortamlardaki amonyak (NH₃) ve karbon dioksit (CO₂) oranını düşürerek: Hayvanlarda stresi ve hastalık riskini azaltır, solunumu ve genel sağlık durumunu iyileştirir, et ve süt kalitesini artırır, ölüm oranlarını düşürür. Ayrıca çalışanlar için daha sağlıklı bir ortam sunar."
       },
       {
-        question: "4. GREENSY evde ya da kapalı alanlarda kullanılabilir mi?",
-        answer: "Evet. GREENSY, evler, ofisler, okullar, kreşler, sağlık merkezleri gibi ortamlarda: Havadaki toz, polen, alerjen, virüs ve bakterileri azaltır, kimyasal madde kullanmadan hava kalitesini artırır, zihinsel rahatlama ve odaklanmaya katkı sağlar. Bu yönüyle doğayı iç mekânlara taşır."
+        question: "4. GREENCY evde ya da kapalı alanlarda kullanılabilir mi?",
+        answer: "Evet. GREENCY, evler, ofisler, okullar, kreşler, sağlık merkezleri gibi ortamlarda: Havadaki toz, polen, alerjen, virüs ve bakterileri azaltır, kimyasal madde kullanmadan hava kalitesini artırır, zihinsel rahatlama ve odaklanmaya katkı sağlar. Bu yönüyle doğayı iç mekânlara taşır."
       },
       {
         question: "5. Ozon üretir mi? İnsanlar ve hayvanlar için güvenli mi?",
-        answer: "Hayır. GREENSY ozon üretmez ve hiçbir toksik gaz salmaz. Soğuk plazma teknolojisiyle çalışır ve CE sertifikalıdır. İnsan, hayvan ve bitkiler için tamamen güvenli ve test edilmiştir."
+        answer: "Hayır. GREENCY ozon üretmez ve hiçbir toksik gaz salmaz. Soğuk plazma teknolojisiyle çalışır ve CE sertifikalıdır. İnsan, hayvan ve bitkiler için tamamen güvenli ve test edilmiştir."
       },
       {
         question: "6. Cihaz sürekli mi çalışmalı?",
         answer: "Kullanım alanına göre farklı modlar mümkündür: Tarım ve hayvancılık uygulamalarında sürekli çalışması önerilir, ev ve ofis gibi alanlarda zamanlayıcılı çalıştırma da mümkündür."
       },
       {
-        question: "7. GREENSY'nin bakımı zor mu?",
-        answer: "Hayır. GREENSY, karmaşık filtre değişimi gerektirmez. Sadece periyodik temizlik ve teknik kontrol ile uzun ömürlü ve verimli çalışır."
+        question: "7. GREENCY'nin bakımı zor mu?",
+        answer: "Hayır. GREENCY, karmaşık filtre değişimi gerektirmez. Sadece periyodik temizlik ve teknik kontrol ile uzun ömürlü ve verimli çalışır."
       },
       {
         question: "8. Enerji tüketimi nasıldır?",
-        answer: "GREENSY, düşük watt tüketimine sahip enerji verimli bir sistemdir. Uzun süreli çalışmalarda bile elektrik tüketimi oldukça ekonomiktir."
+        answer: "GREENCY, düşük watt tüketimine sahip enerji verimli bir sistemdir. Uzun süreli çalışmalarda bile elektrik tüketimi oldukça ekonomiktir."
       },
       {
         question: "9. Daha fazla bilgi almak ve iletişime geçmek için ne yapmalıyım?",
-        answer: "GREENSY hakkında daha fazla bilgi almak, teknik destek talep etmek veya sipariş vermek için bizimle iletişime geçebilirsiniz. 📩 Lütfen bilgi almak için e-posta gönderin: 👉 info@suntekekoloji.com Destek ekibimiz size en kısa sürede dönüş sağlayacaktır."
+        answer: "GREENCY hakkında daha fazla bilgi almak, teknik destek talep etmek veya sipariş vermek için bizimle iletişime geçebilirsiniz. 📩 Lütfen bilgi almak için e-posta gönderin: 👉 info@suntekekoloji.com Destek ekibimiz size en kısa sürede dönüş sağlayacaktır."
       }
     ],
     en: [
       {
-        question: "1. What is GREENSY and how does it work?",
-        answer: "GREENSY is a negative ion generator that mimics negative ions found in nature. It ionizes oxygen molecules in the air using cold plasma technology and releases negative ions into the environment in a controlled manner. These ions neutralize harmful gases (such as ammonia, CO₂), dust, and microorganisms, improving air quality, supporting plant growth, and improving animal health."
+        question: "1. What is GREENCY and how does it work?",
+        answer: "GREENCY is a negative ion generator that mimics negative ions found in nature. It ionizes oxygen molecules in the air using cold plasma technology and releases negative ions into the environment in a controlled manner. These ions neutralize harmful gases (such as ammonia, CO₂), dust, and microorganisms, improving air quality, supporting plant growth, and improving animal health."
       },
       {
-        question: "2. What does GREENSY do in agriculture?",
-        answer: "Thanks to GREENSY: Plant immunity increases, the need for chemical fertilizers and pesticides decreases, soil microorganisms become active, productivity increases while residue risk is eliminated. It can be safely used especially in greenhouses and open field agriculture."
+        question: "2. What does GREENCY do in agriculture?",
+        answer: "Thanks to GREENCY: Plant immunity increases, the need for chemical fertilizers and pesticides decreases, soil microorganisms become active, productivity increases while residue risk is eliminated. It can be safely used especially in greenhouses and open field agriculture."
       },
       {
         question: "3. What contribution does it make in livestock farming?",
-        answer: "GREENSY reduces ammonia (NH₃) and carbon dioxide (CO₂) levels in closed environments such as barns and poultry houses: It reduces stress and disease risk in animals, improves respiration and general health, increases meat and milk quality, reduces mortality rates. It also provides a healthier environment for workers."
+        answer: "GREENCY reduces ammonia (NH₃) and carbon dioxide (CO₂) levels in closed environments such as barns and poultry houses: It reduces stress and disease risk in animals, improves respiration and general health, increases meat and milk quality, reduces mortality rates. It also provides a healthier environment for workers."
       },
       {
-        question: "4. Can GREENSY be used at home or in closed areas?",
-        answer: "Yes. GREENSY in environments such as homes, offices, schools, kindergartens, health centers: Reduces dust, pollen, allergens, viruses, and bacteria in the air, improves air quality without using chemicals, contributes to mental relaxation and focus. In this way, it brings nature indoors."
+        question: "4. Can GREENCY be used at home or in closed areas?",
+        answer: "Yes. GREENCY in environments such as homes, offices, schools, kindergartens, health centers: Reduces dust, pollen, allergens, viruses, and bacteria in the air, improves air quality without using chemicals, contributes to mental relaxation and focus. In this way, it brings nature indoors."
       },
       {
         question: "5. Does it produce ozone? Is it safe for humans and animals?",
-        answer: "No. GREENSY does not produce ozone and does not emit any toxic gases. It works with cold plasma technology and is CE certified. It is completely safe and tested for humans, animals, and plants."
+        answer: "No. GREENCY does not produce ozone and does not emit any toxic gases. It works with cold plasma technology and is CE certified. It is completely safe and tested for humans, animals, and plants."
       },
       {
         question: "6. Should the device run continuously?",
         answer: "Different modes are possible depending on the area of use: Continuous operation is recommended in agriculture and livestock applications, timed operation is also possible in areas such as homes and offices."
       },
       {
-        question: "7. Is GREENSY maintenance difficult?",
-        answer: "No. GREENSY does not require complex filter changes. It works efficiently and long-lasting with only periodic cleaning and technical inspection."
+        question: "7. Is GREENCY maintenance difficult?",
+        answer: "No. GREENCY does not require complex filter changes. It works efficiently and long-lasting with only periodic cleaning and technical inspection."
       },
       {
         question: "8. How is energy consumption?",
-        answer: "GREENSY is an energy-efficient system with low watt consumption. Even in long-term operations, electricity consumption is quite economical."
+        answer: "GREENCY is an energy-efficient system with low watt consumption. Even in long-term operations, electricity consumption is quite economical."
       },
       {
         question: "9. What should I do to get more information and contact?",
-        answer: "You can contact us to get more information about GREENSY, request technical support, or place an order. 📩 Please send an email for information: 👉 info@suntekekoloji.com Our support team will get back to you as soon as possible."
+        answer: "You can contact us to get more information about GREENCY, request technical support, or place an order. 📩 Please send an email for information: 👉 info@suntekekoloji.com Our support team will get back to you as soon as possible."
       }
     ]
   };
@@ -938,8 +938,8 @@ const SSS = ({ lang }) => {
           </h1>
           <p className="sss-hero-description">
             {lang === 'tr' 
-              ? 'GREENSY teknolojisi hakkında merak ettiğiniz her şeyi burada bulabilirsiniz.'
-              : 'Find everything you\'re curious about GREENSY technology here.'
+              ? 'GREENCY teknolojisi hakkında merak ettiğiniz her şeyi burada bulabilirsiniz.'
+              : 'Find everything you\'re curious about GREENCY technology here.'
             }
           </p>
         </div>
@@ -1207,7 +1207,7 @@ function App() {
         'SSS': 'SSS',
         'İletişim': 'İletişim'
       },
-      sloganMain: 'GREENSY',
+      sloganMain: 'GREENCY',
       sloganSubtitle: 'Gelecek Bize Emanet',
       tanitim: 'doğadan ilham alarak geliştirilen, negatif iyon teknolojisiyle tarımda, hayvancılıkta ve yaşam alanlarında devrim yaratan bir dönüşüm teknolojisidir.',
       incele: 'İncele'
@@ -1221,7 +1221,7 @@ function App() {
         'SSS': 'FAQ',
         'İletişim': 'Contact'
       },
-      sloganMain: 'GREENSY',
+      sloganMain: 'GREENCY',
       sloganSubtitle: 'The Future is Entrusted to Us',
       tanitim: 'is a transformation technology developed with inspiration from nature, creating a revolution in agriculture, livestock, and living spaces with negative ion technology.',
       incele: 'Explore'

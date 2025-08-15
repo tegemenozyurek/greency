@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from './images/greensy.png';
+import logo from './images/greency.png';
 import './Navbar.css';
 
 const Navbar = ({ lang, setLang, translations }) => {
