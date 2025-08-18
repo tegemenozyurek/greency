@@ -1,4 +1,4 @@
-# 🌱 GREENSY - Transformation Technology
+# 🌱 GREENSY - Transformation Technology ...
 
 [![React](https://img.shields.io/badge/React-18.0.0-blue.svg)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-16.0.0-green.svg)](https://nodejs.org/)
